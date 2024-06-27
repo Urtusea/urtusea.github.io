@@ -4,11 +4,11 @@
   <url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/template/quick_power/</loc>
+    <loc>http://localhost:1313/codeforces/1741/cf-1741d/</loc>
+  </url><url>
+    <loc>http://localhost:1313/codeforces/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-  </url><url>
-    <loc>http://localhost:1313/template/</loc>
   </url><url>
     <loc>http://localhost:1313/</loc>
   </url>

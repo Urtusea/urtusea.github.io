@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    
+
+    
+        
+            <meta
+                name="description"
+                content="" />
+        
+
+        
+            <meta
+                name="keywords"
+                content=" " />
+        
+
+        
+            <meta
+                name="author"
+                content="Urtusea" />
+        
+
+    
+
+
+    <title>
+        
+            CF 1741D |
+            Urtusea CP-Algorithm Blogs
+        
+    </title>
+
+    
+
+
+    
+    
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+    
+
+
+    
+    
+
+    
+
+    
+
+        
+            
+            <link
+                rel="stylesheet"
+                href="/reset.min_6851612176967065231.3662e40c85350bf0bcf308b7db81c173e4b690b862d3c3cde460de5155550bf055b7ff48cddb1cf5255e55f0355196d8dec1d49434b2457842cc77ebea198f3f.css"
+                integrity="sha512-NmLkDIU1C/C88wi324HBc&#43;S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" />
+        
+            
+            <link
+                rel="stylesheet"
+                href="/_theme/css/01_layout.26ffaaf7a32c233cbe1c7c9093d3b744e9466ea0a11559a8f3350a40468de72856a6fd3fd8f38bc13f66093fbeeee908d56483cac2ac01de75b17f999fd2606a.css"
+                integrity="sha512-Jv&#43;q96MsIzy&#43;HHyQk9O3ROlGbqChFVmo8zUKQEaN5yhWpv0/2POLwT9mCT&#43;&#43;7ukI1WSDysKsAd51sX&#43;Zn9Jgag==" />
+        
+            
+            <link
+                rel="stylesheet"
+                href="/_theme/css/02_style.6e547a963eb4b47b8466738206d9e1d164b1af63a268440672bd5138749f058278dbecc942f26f32c884fba203dc138d3dbdc0d3b559a049feec71464bb56ca1.css"
+                integrity="sha512-blR6lj60tHuEZnOCBtnh0WSxr2OiaEQGcr1ROHSfBYJ42&#43;zJQvJvMsiE&#43;6ID3BONPb3A07VZoEn&#43;7HFGS7VsoQ==" />
+        
+            
+            <link
+                rel="stylesheet"
+                href="/_theme/css/03_home.c12c2a68104bddb5523ceeaafb439534c4574cc4e78ffbab3a8e7d8c2bd3bd4eab28a89e9039fb588153dbf64108c4eafaee3c52d6192050f7ef5ec4ecc7c21f.css"
+                integrity="sha512-wSwqaBBL3bVSPO6q&#43;0OVNMRXTMTnj/urOo59jCvTvU6rKKiekDn7WIFT2/ZBCMTq&#43;u48UtYZIFD3717E7MfCHw==" />
+        
+            
+            <link
+                rel="stylesheet"
+                href="/_theme/css/04_responsive.cd3527afabdc02c3c117d57389f622b57e143ac3ee5dcc150b0e4b6ef262353217a1bf92f365e0f23f3021fd5e97abab71b1f06c2c431e885f46a27f5d9e9730.css"
+                integrity="sha512-zTUnr6vcAsPBF9VzifYitX4UOsPuXcwVCw5LbvJiNTIXob&#43;S82Xg8j8wIf1el6urcbHwbCxDHohfRqJ/XZ6XMA==" />
+        
+            
+            <link
+                rel="stylesheet"
+                href="/_theme/css/05_markdown.b84d310882bf53ceaa3e614e623874bb542bacb17445bb27c2deb29e6dc0525a4d9fa5c49532000df51ca1cb29d2697dcd4ec4ef2493bd86f5d820de17ebae21.css"
+                integrity="sha512-uE0xCIK/U86qPmFOYjh0u1QrrLF0Rbsnwt6ynm3AUlpNn6XElTIADfUcocsp0ml9zU7E7ySTvYb12CDeF&#43;uuIQ==" />
+        
+
+    
+
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+        
+            
+
+
+
+
+    
+        
+    
+
+
+
+
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV"
+    crossorigin="anonymous" />
+
+
+<script
+    defer
+    src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8"
+    crossorigin="anonymous"></script>
+
+
+<script
+    defer
+    src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+    crossorigin="anonymous"
+    
+        onload="renderMathInElement(document.body , { trust: true });"
+    ></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+            
+            
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true },
+            ],
+            
+            throwOnError: false,
+
+            
+                trust: true
+            
+        });
+    });
+</script>
+
+        
+
+    
+</head>
+
+
+
+    <body>
+        <header class="header">
+    <div class="header_left">
+        
+    </div>
+
+    <div class="header_middle">
+        
+            CF 1741D -
+            Urtusea CP-Algorithm Blogs
+        
+    </div>
+</header>
+
+
+
+        <main>
+            <aside class="sidebar">
+    
+
+
+
+    
+    
+
+    
+    
+
+
+    <ul class="section-tree">
+        
+            
+                <li
+                    
+                        class="dir opened-dir"
+                    >
+                    <span class="dir-text"> Codeforces </span>
+
+                    
+
+
+
+    
+    
+
+    
+    
+
+
+    <ul class="section-tree">
+        
+            
+                <li class="file">
+                    <a href="http://localhost:1313/codeforces/1741/cf-1741d/" title="./codeforces/1741/cf-1741d/">
+                        
+                            CF 1741D
+                        
+                    </a>
+                </li>
+            
+        
+    </ul>
+
+
+                </li>
+            
+        
+    </ul>
+
+
+</aside>
+<aside class="exapandable"></aside>
+
+
+            
+    <article class="main">
+        <button
+    class="sidebar-toggle-btn"
+    type="menu"
+    aria-expanded="false"
+    aria-haspopup="true">
+    <i class="bi bi-list"></i>
+</button>
+
+
+
+        <div class="title">
+            <h1 class="title-header">
+                CF 1741D
+            </h1>
+
+            <div class="author-date-readtime">
+                
+
+                    
+                        <div class="author" title="Author">
+                            <i class="bi bi-person"></i>
+                            <a
+                                href="/author/urtusea/"
+                                class="cat-btn">
+                                Urtusea
+                            </a>
+                        </div>
+                    
+
+                
+
+                
+
+                
+            </div>
+        </div>
+
+        <div class="article-meta">
+            
+
+            
+
+            
+                <div class="breadcumb">
+                    <i class="bi bi-folder"></i>
+                    
+    
+    
+
+
+
+
+<a href="http://localhost:1313/" class="bread-btn">
+    
+        <i class="bi bi-house-fill"></i>
+    
+
+    
+        Home
+    
+</a>
+
+
+
+
+    /
+
+
+
+<a href="http://localhost:1313/codeforces/" class="bread-btn">
+    
+
+    
+        Codeforces
+    
+</a>
+
+
+
+
+    /
+
+
+
+<a href="http://localhost:1313/codeforces/1741/cf-1741d/" class="bread-btn">
+    
+
+    
+        
+            CF 1741D
+        
+
+    
+</a>
+
+                </div>
+            
+
+            
+        </div>
+
+        
+            <nav id="TableOfContents"></nav>
+        
+
+
+        <div class="content">
+            
+                <h1 id="前言">前言：</h1>
+<ul>
+<li><a href="https://codeforces.com/contest/1741/problem/D">D. Masha and a Beautiful Tree</a></li>
+<li>Codeforces: 1300</li>
+<li>Clist: 1286</li>
+<li>Tags: 分治，DFS</li>
+<li>时间复杂度: $O(n \space log \space n)$</li>
+</ul>
+<h1 id="题意">题意：</h1>
+<p>有一颗深度为 $n$ 的满二叉树，现给你其 $2^n$ 个叶子节点，叶子节点的权值构成一个长度为 $2^n$ 的排列 $p$，从左到右依次为 $p_1, p_2, p_3, &hellip;, p_{2^n}$</p>
+<p>对于每一次操作你只能操作非叶子节点，并交换该节点的两颗子树，问你是否有可能将叶子节点的排列 $p$ 变为单调递增的排列</p>
+<p>即满足 $\forall 1 \le i \le 2^n - 1, p[i] &lt; p[i + 1]$</p>
+<h1 id="思路">思路：</h1>
+<p>不妨首先来看小部分操作是如何满足条件的：</p>
+<ul>
+<li>当 $n = 1$ 时，设 $p = [2, 1]$，显然交换 $p_1$ 与 $p_2$ 即可，交换后 $p&rsquo; = [1, 2]$ 满足条件</li>
+<li>当 $n = 2$ 时，设 $p = [3, 4, 2, 1]$，将其分割为 $p = [3, 4, | 2, 1]$，对于右边我们则转换为了 $n = 1$ 时的小问题，直接交换即可，问题变成了 $p = [3, 4, | 1, 2]$，我们也只能交换这一个相邻的区间，则 $p&rsquo; = [1, 2, | 3, 4]$ 满足条件</li>
+</ul>
+<p>容易发现的，只需要从小的叶子区间维护到大的叶子区间即可，很典型的分治了</p>
+<p>所以</p>
+<h1 id="代码">代码：</h1>
+
+
+
+
+
+
+
+<div class="codeblock">
+    
+        <div class="copy-button-box">
+            <button class="copy-button" state="copy" data="#include%20%3cbits/stdc&#43;&#43;.h%3e%0ausing%20namespace%20std;%0a%0avoid%20code%28%20/*%20Copyright%20by%20Urtusea%20*/%20%29%0a%7b%0a%20%20%20%20int%20n,%20ans%20=%200;%0a%20%20%20%20cin%20%3e%3e%20n;%0a%0a%20%20%20%20vector%3cint%3e%20p%28n%20&#43;%201%29;%0a%20%20%20%20for%20%28int%20i%20=%201;%20i%20%3c=%20n;%20i&#43;&#43;%29%20cin%20%3e%3e%20p[i];%0a%0a%20%20%20%20function%3cint%28int,%20int%29%3e%20dfs%20=%20[&amp;]%28int%20u,%20int%20len%29%0a%20%20%20%20%7b%0a%20%20%20%20%20%20%20%20//%20%e5%a6%82%e6%9e%9c%e5%bd%93%e5%89%8d%e5%8c%ba%e9%97%b4%e9%95%bf%e5%ba%a6%e4%b8%ba%201%20%e5%88%99%e7%9b%b4%e6%8e%a5%e8%bf%94%e5%9b%9e%20p[u]%20%e5%8d%b3%e5%8f%af%0a%20%20%20%20%20%20%20%20if%20%28len%20==%201%29%20return%20p[u];%0a%0a%20%20%20%20%20%20%20%20//%20%e8%ae%b0%e5%bd%95%e5%b7%a6%e5%8f%b3%e5%ad%90%e6%a0%91%e6%9c%80%e5%a4%a7%e5%80%bc%0a%20%20%20%20%20%20%20%20int%20lMax%20=%20dfs%28u,%20%20%20%20%20%20%20%20%20%20%20len%20/%202%29;%0a%20%20%20%20%20%20%20%20int%20rMax%20=%20dfs%28u%20&#43;%20len%20/%202,%20len%20/%202%29;%0a%0a%20%20%20%20%20%20%20%20//%20%e5%a6%82%e6%9e%9c%e5%b7%a6%e5%ad%90%e6%a0%91%e6%9c%80%e5%a4%a7%e5%80%bc%e5%a4%a7%e4%ba%8e%e5%8f%b3%e5%ad%90%e6%a0%91%e6%9c%80%e5%a4%a7%e5%80%bc%ef%bc%8c%e5%88%99%e4%b8%a4%e9%a2%97%e5%ad%90%e6%a0%91%e9%9c%80%e8%a6%81%e8%bf%9b%e8%a1%8c%e4%b8%80%e6%ac%a1%e4%ba%a4%e6%8d%a2%0a%20%20%20%20%20%20%20%20if%20%28rMax%20%3c%20lMax%20&amp;&amp;%20&#43;&#43;ans%29%20for%20%28int%20i%20=%20u;%20i%20%3c%20u%20&#43;%20len%20/%202;%20i&#43;&#43;%29%0a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20swap%28p[i],%20p[i%20&#43;%20len%20/%202]%29;%0a%0a%20%20%20%20%20%20%20%20//%20%e8%bf%94%e5%9b%9e%e4%b8%a4%e9%a2%97%e5%ad%90%e6%a0%91%e7%9a%84%e6%9c%80%e5%a4%a7%e5%80%bc%0a%20%20%20%20%20%20%20%20return%20max%28lMax,%20rMax%29;%0a%20%20%20%20%7d;%0a%20%20%20%20dfs%281,%20n%29;%0a%0a%20%20%20%20//%20%e5%88%a4%e6%96%ad%e4%ba%a4%e6%8d%a2%e5%ae%8c%e6%af%95%e5%90%8e%e7%ad%94%e6%a1%88%e6%98%af%e5%90%a6%e7%ac%a6%e5%90%88%e6%9d%a1%e4%bb%b6%0a%20%20%20%20for%20%28int%20i%20=%201;%20i%20%3c%20n;%20i&#43;&#43;%29%20if%20%28p[i]%20%3e%20p[i%20&#43;%201]%29%20%0a%20%20%20%20%7b%0a%20%20%20%20%20%20%20%20return%20void%28cout%20%3c%3c%20-1%20%3c%3c%20%27%5cn%27%29;%0a%20%20%20%20%7d%0a%0a%20%20%20%20cout%20%3c%3c%20ans%20%3c%3c%20%27%5cn%27;%0a%7d%0a%0aint%20main%28%29%0a%7b%0a%20%20%20%20cin.tie%28nullptr%29-%3esync_with_stdio%28false%29;%0a%0a#ifdef%20Urtusea%0a%20%20%20%20freopen%28%22main.in%22,%20%20%22r%22,%20stdin%20%29;%0a%20%20%20%20freopen%28%22main.out%22,%20%22w%22,%20stdout%29;%0a#endif%0a%0a%20%20%20%20for%20%28int%20i%20=%201,%20n%20=%20%28cin%20%3e%3e%20n,%20n%29;%20i%20%3c=%20n;%20i&#43;&#43;%29%0a%20%20%20%20%7b%0a%20%20%20%20%20%20%20%20code%28%29;%0a%20%20%20%20%7d%0a%0a%20%20%20%20return%200;%0a%7d">
+                <i class="bi bi-copy"></i>
+            </button>
+        </div>
+    
+
+    
+        <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">code</span>( <span style="color:#75715e">/* Copyright by Urtusea */</span> )
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> n, ans <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    cin <span style="color:#f92672">&gt;&gt;</span> n;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> p(n <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>) cin <span style="color:#f92672">&gt;&gt;</span> p[i];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    function<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>(<span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">int</span>)<span style="color:#f92672">&gt;</span> dfs <span style="color:#f92672">=</span> [<span style="color:#f92672">&amp;</span>](<span style="color:#66d9ef">int</span> u, <span style="color:#66d9ef">int</span> len)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 如果当前区间长度为 1 则直接返回 p[u] 即可
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (len <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">return</span> p[u];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 记录左右子树最大值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> lMax <span style="color:#f92672">=</span> dfs(u,           len <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> rMax <span style="color:#f92672">=</span> dfs(u <span style="color:#f92672">+</span> len <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>, len <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 如果左子树最大值大于右子树最大值，则两颗子树需要进行一次交换
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (rMax <span style="color:#f92672">&lt;</span> lMax <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">++</span>ans) <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> u; i <span style="color:#f92672">&lt;</span> u <span style="color:#f92672">+</span> len <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>                swap(p[i], p[i <span style="color:#f92672">+</span> len <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>]);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 返回两颗子树的最大值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> max(lMax, rMax);
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>    dfs(<span style="color:#ae81ff">1</span>, n);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 判断交换完毕后答案是否符合条件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>) <span style="color:#66d9ef">if</span> (p[i] <span style="color:#f92672">&gt;</span> p[i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>]) 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">void</span>(cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#39;\n&#39;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cout <span style="color:#f92672">&lt;&lt;</span> ans <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#39;\n&#39;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    cin.tie(<span style="color:#66d9ef">nullptr</span>)<span style="color:#f92672">-&gt;</span>sync_with_stdio(false);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#ifdef Urtusea
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    freopen(<span style="color:#e6db74">&#34;main.in&#34;</span>,  <span style="color:#e6db74">&#34;r&#34;</span>, stdin );
+</span></span><span style="display:flex;"><span>    freopen(<span style="color:#e6db74">&#34;main.out&#34;</span>, <span style="color:#e6db74">&#34;w&#34;</span>, stdout);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#endif
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, n <span style="color:#f92672">=</span> (cin <span style="color:#f92672">&gt;&gt;</span> n, n); i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        code();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+    
+</div>
+
+            
+        </div>
+    </article>
+
+        </main>
+
+        <footer class="footer">
+    <div class="footer-left">
+        <ul class="social">
+            
+                <li>All Rights Reserved ®.</li>
+            
+
+            
+                <li>Urtusea</li>
+            
+
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </div>
+
+    <div class="footer-right">
+        <ul class="control status clearfix">
+            
+
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                <li title="">
+                    
+                </li>
+            
+        </ul>
+    </div>
+</footer>
+
+    </body>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        <script
+            type="text/javascript"
+            src="/_theme/js/codeblock_copy.2e8ec6d1c2acd298acca044dd90a3e6c550bfe467768a22d8ce69c30cefdf813e1f2bdf31939c94542b977db46bdc0e844c807779972408d8a58df29657a635b.js"
+            integrity="sha512-Lo7G0cKs0pisygRN2Qo&#43;bFUL/kZ3aKItjOacMM79&#43;BPh8r3zGTnJRUK5d9tGvcDoRMgHd5lyQI2KWN8pZXpjWw=="></script>
+    
+        
+        <script
+            type="text/javascript"
+            src="/_theme/js/dir_toggle.35e8f79b370b43fa56a12e33f2a6498fdd571d6d857796df2ade4bf9af6a2d6b274fcc3846de6aa679a12d2e9cce53330ee1eeec121bc40d0a42d98b2b413b8f.js"
+            integrity="sha512-Nej3mzcLQ/pWoS4z8qZJj91XHW2Fd5bfKt5L&#43;a9qLWsnT8w4Rt5qpnmhLS6czlMzDuHu7BIbxA0KQtmLK0E7jw=="></script>
+    
+        
+        <script
+            type="text/javascript"
+            src="/_theme/js/sidebar.c85fe41e1d2b187f402cf6abbc0273c6c8b0767b0d20dec7ca6134a4dc3e01a4bc8a9bcee30203dea8546be9fdbd73d53e09aa8908f54a44429ca324e81905da.js"
+            integrity="sha512-yF/kHh0rGH9ALParvAJzxsiwdnsNIN7HymE0pNw&#43;AaS8ipvO4wID3qhUa&#43;n9vXPVPgmqiQj1SkRCnKMk6BkF2g=="></script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+
+
+
+
+</html>

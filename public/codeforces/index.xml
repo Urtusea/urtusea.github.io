@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Codeforces on Urtusea CP-Algorithm</title>
+    <link>http://localhost:1313/codeforces/</link>
+    <description>Recent content in Codeforces on Urtusea CP-Algorithm</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/codeforces/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CF 1741D</title>
+      <link>http://localhost:1313/codeforces/1741/cf-1741d/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/codeforces/1741/cf-1741d/</guid>
+      <description>难度 &amp;amp; 标签： Codeforces: 题意： 有一颗深度为 $n$ 的满二叉树，现给你其 $2^n$ 个叶子节点，叶子节点的权值构成一个长度为 $2^n$ 的排列，</description>
+    </item>
+  </channel>
+</rss>
