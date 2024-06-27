@@ -8,6 +8,10 @@
   </url><url>
     <loc>http://localhost:1313/codeforces/</loc>
   </url><url>
+    <loc>http://localhost:1313/problem-list/divide-and-conquer/</loc>
+  </url><url>
+    <loc>http://localhost:1313/problem-list/</loc>
+  </url><url>
     <loc>http://localhost:1313/tags/</loc>
   </url><url>
     <loc>http://localhost:1313/</loc>
