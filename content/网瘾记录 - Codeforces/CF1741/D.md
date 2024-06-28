@@ -10,6 +10,7 @@ title: "D"
 - Tags: 分治，DFS
 - 时间复杂度: {{<katex>}}O(n \space log \space n){{</katex>}}
 
+
 # 题意：
 
 有一颗深度为 {{<katex>}}n{{</katex>}} 的满二叉树，现给你其 {{<katex>}}2^n{{</katex>}} 个叶子节点，叶子节点的权值构成一个长度为 {{<katex>}}2^n{{</katex>}} 的排列 {{<katex>}}p{{</katex>}}，从左到右依次为 {{<katex>}}p_1, p_2, p_3, ..., p_{2^n}{{</katex>}}
