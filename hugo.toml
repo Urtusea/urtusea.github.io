@@ -1,4 +1,22 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'Urtusea CP-Algorithm'
-theme = 'dark-theme-editor'
+baseURL                = 'https://example.org/'
+languageCode           = 'zh-cn'
+defaultContentLanguage = "zh"
+pluralizeListTitles    = false
+title                  = "Urtusea CP-Algorithm"
+
+[module]
+[[module.imports]]
+path = 'github.com/alex-shpak/hugo-book'
+
+[params]
+    # 主题颜色
+    BookTheme   = 'light'
+
+    # 文档位置
+    BookSection = '*'
+
+    # 查找功能
+    BookSearch = true
+
+[markup.goldmark.renderer]
+  unsafe = false
