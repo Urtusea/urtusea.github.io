@@ -10,13 +10,10 @@ path = 'github.com/alex-shpak/hugo-book'
 
 [params]
     # 主题颜色
-    BookTheme   = 'light'
+    BookTheme   = 'dark'
 
     # 文档位置
     BookSection = '*'
 
     # 查找功能
     BookSearch = true
-
-[markup.goldmark.renderer]
-  unsafe = false

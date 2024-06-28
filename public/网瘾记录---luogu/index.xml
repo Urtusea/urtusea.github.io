@@ -1,1 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Urtusea CP-Algorithm</title><link>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---luogu/</link><description>Recent content on Urtusea CP-Algorithm</description><generator>Hugo</generator><language>zh-cn</language><atom:link href="http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---luogu/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Urtusea CP-Algorithm</title>
+    <link>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---luogu/</link>
+    <description>Recent content on Urtusea CP-Algorithm</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---luogu/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
