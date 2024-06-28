@@ -4,26 +4,26 @@ title: "D"
 
 # 前言：
 
-- [D. Masha and a Beautiful Tree](https://codeforces.com/contest/1741/problem/D)
-- Codeforces: 1300
-- Clist: 1286
+- Links: [D. Masha and a Beautiful Tree](https://codeforces.com/contest/1741/problem/D)
+- Codeforces: {{<katex>}}1300{{</katex>}}
+- Clist: {{<katex>}}1286{{</katex>}}
 - Tags: 分治，DFS
-- 时间复杂度: $O(n \space log \space n)$
+- 时间复杂度: {{<katex>}}O(n \space log \space n){{</katex>}}
 
 # 题意：
 
-有一颗深度为 $n$ 的满二叉树，现给你其 $2^n$ 个叶子节点，叶子节点的权值构成一个长度为 $2^n$ 的排列 $p$，从左到右依次为 $p_1, p_2, p_3, ..., p_{2^n}$
+有一颗深度为 {{<katex>}}n{{</katex>}} 的满二叉树，现给你其 {{<katex>}}2^n{{</katex>}} 个叶子节点，叶子节点的权值构成一个长度为 {{<katex>}}2^n{{</katex>}} 的排列 {{<katex>}}p{{</katex>}}，从左到右依次为 {{<katex>}}p_1, p_2, p_3, ..., p_{2^n}{{</katex>}}
 
 对于每一次操作你只能操作非叶子节点，并交换该节点的两颗子树，问你是否有可能将叶子节点的排列 $p$ 变为单调递增的排列
 
-即满足 $\forall 1 \le i \le 2^n - 1, p[i] < p[i + 1]$
+即满足 {{<katex>}}\forall 1 \le i \le 2^n - 1, p[i] < p[i + 1]{{</katex>}}
 
 # 思路：
 
 不妨首先来看小部分操作是如何满足条件的：
 
-- 当 $n = 1$ 时，设 $p = [2, 1]$，显然交换 $p_1$ 与 $p_2$ 即可，交换后 $p' = [1, 2]$ 满足条件
-- 当 $n = 2$ 时，设 $p = [3, 4, 2, 1]$，将其分割为 $p = [3, 4, | 2, 1]$，对于右边我们则转换为了 $n = 1$ 时的小问题，直接交换即可，问题变成了 $p = [3, 4, | 1, 2]$，我们也只能交换这一个相邻的区间，则 $p' = [1, 2, | 3, 4]$ 满足条件
+- 当 {{<katex>}}n = 1{{</katex>}} 时，设 {{<katex>}}p = [2, 1]{{</katex>}}，显然交换 {{<katex>}}p_1{{</katex>}} 与 {{<katex>}}p_2{{</katex>}} 即可，交换后 {{<katex>}}p' = [1, 2]{{</katex>}} 满足条件
+- 当 {{<katex>}}n = 2{{</katex>}} 时，设 {{<katex>}}p = [3, 4, 2, 1]{{</katex>}}，将其分割为 {{<katex>}}p = [3, 4, | 2, 1]{{</katex>}}，对于右边我们则转换为了 {{<katex>}}n = 1{{</katex>}} 时的小问题，直接交换即可，问题变成了 {{<katex>}}p = [3, 4, | 1, 2]{{</katex>}}，我们也只能交换这一个相邻的区间，则 {{<katex>}}p' = [1, 2, | 3, 4]{{</katex>}} 满足条件
 
 容易发现的，只需要从小的叶子区间维护到大的叶子区间即可
 

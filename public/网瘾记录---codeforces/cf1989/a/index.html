@@ -3,12 +3,17 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
+<meta name="description" content="前言： # Links: A. Catch the Coin Codeforces: 待更新 Clist: \(784\) Tags: 模拟 时间复杂度: \(O(1)\) 题意： # 给你一个硬币的坐标 \((x, y)\) ，你初始位置在 \((0, 0)\) ，对于每一时刻均可以向满足 \(|x&#39;-x| &#43; |y&#39;-y| \le 2\) 的点 \((x&#39;, y&#39;)\) 移动，硬币在你移动后坐标变为 \((x, y - 1)\) ，问你是否有一时刻可以接到硬币
+思路： # 观察可以发现，只有当 \(y \geq -1\) 时才满足条件
+代码： # #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; void code(/* Copyright by Urtusea */) { int x, y; cin &gt;&gt; x &gt;&gt; y; if (y &gt;= -1) cout &lt;&lt; &#34;YES\n&#34;; else cout &lt;&lt; &#34;NO\n&#34;; } int main(int argc, char *argv[], char *envp[]) { cin.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/a/">
   <meta property="og:site_name" content="Urtusea CP-Algorithm">
   <meta property="og:title" content="A">
+  <meta property="og:description" content="前言： # Links: A. Catch the Coin Codeforces: 待更新 Clist: \(784\) Tags: 模拟 时间复杂度: \(O(1)\) 题意： # 给你一个硬币的坐标 \((x, y)\) ，你初始位置在 \((0, 0)\) ，对于每一时刻均可以向满足 \(|x&#39;-x| &#43; |y&#39;-y| \le 2\) 的点 \((x&#39;, y&#39;)\) 移动，硬币在你移动后坐标变为 \((x, y - 1)\) ，问你是否有一时刻可以接到硬币
+思路： # 观察可以发现，只有当 \(y \geq -1\) 时才满足条件
+代码： # #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; void code(/* Copyright by Urtusea */) { int x, y; cin &gt;&gt; x &gt;&gt; y; if (y &gt;= -1) cout &lt;&lt; &#34;YES\n&#34;; else cout &lt;&lt; &#34;NO\n&#34;; } int main(int argc, char *argv[], char *envp[]) { cin.">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="网瘾记录---codeforces">
@@ -18,7 +23,7 @@
 <link rel="canonical" href="http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/a/">
 <link rel="stylesheet" href="/book.min.484e3cdc2f6e660df5c808d0eaf99198acde922db9728bc590485956e896548a.css" integrity="sha256-SE483C9uZg31yAjQ6vmRmKzeki25covFkEhZVuiWVIo=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/zh.search.min.ffc0f2c0948b8fa171a45d3bd0dea546686116c29f4aab1d2b1cd1be7379e466.js" integrity="sha256-/8DywJSLj6FxpF070N6lRmhhFsKfSqsdKxzRvnN55GY=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.a34e576cb746a28f1976c9471f37c3f67d602c3da5da61831dce0d910be9d21e.js" integrity="sha256-o05XbLdGoo8ZdslHHzfD9n1gLD2l2mGDHc4NkQvp0h4=" crossorigin="anonymous"></script>
 
   
 
@@ -178,6 +183,30 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     
       
+        <li>
+          
+  
+  
+
+  
+    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/a/" class="active">A</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/b/" class="">B</a>
+  
+
+        </li>
+      
     
   </ul>
 
@@ -305,7 +334,89 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown book-article"></article>
+  <article class="markdown book-article"><h1 id="前言">
+  前言：
+  <a class="anchor" href="#%e5%89%8d%e8%a8%80">#</a>
+</h1>
+<ul>
+<li>Links: <a href="https://codeforces.com/contest/1989/problem/A">A. Catch the Coin</a></li>
+<li>Codeforces: 待更新</li>
+<li>Clist: 
+<link rel="stylesheet" href="/katex/katex.min.css" />
+<script defer src="/katex/katex.min.js"></script>
+<script defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script><span>
+  \(784\)
+</span>
+</li>
+<li>Tags: 模拟</li>
+<li>时间复杂度: <span>
+  \(O(1)\)
+</span>
+</li>
+</ul>
+<h1 id="题意">
+  题意：
+  <a class="anchor" href="#%e9%a2%98%e6%84%8f">#</a>
+</h1>
+<p>给你一个硬币的坐标 <span>
+  \((x, y)\)
+</span>
+，你初始位置在 <span>
+  \((0, 0)\)
+</span>
+，对于每一时刻均可以向满足 <span>
+  \(|x&#39;-x| &#43; |y&#39;-y| \le 2\)
+</span>
+ 的点 <span>
+  \((x&#39;, y&#39;)\)
+</span>
+ 移动，硬币在你移动后坐标变为 <span>
+  \((x, y - 1)\)
+</span>
+，问你是否有一时刻可以接到硬币</p>
+<h1 id="思路">
+  思路：
+  <a class="anchor" href="#%e6%80%9d%e8%b7%af">#</a>
+</h1>
+<p>观察可以发现，只有当 <span>
+  \(y \geq -1\)
+</span>
+ 时才满足条件</p>
+<h1 id="代码">
+  代码：
+  <a class="anchor" href="#%e4%bb%a3%e7%a0%81">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">code</span>(<span style="color:#75715e">/* Copyright by Urtusea */</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> x, y;
+</span></span><span style="display:flex;"><span>    cin <span style="color:#f92672">&gt;&gt;</span> x <span style="color:#f92672">&gt;&gt;</span> y;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (y <span style="color:#f92672">&gt;=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;YES</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;NO</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc, <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>argv[], <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>envp[])
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    cin.tie(<span style="color:#66d9ef">nullptr</span>)<span style="color:#f92672">-&gt;</span>sync_with_stdio(false);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#ifdef Urtusea
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    freopen(<span style="color:#e6db74">&#34;main.in&#34;</span>,  <span style="color:#e6db74">&#34;r&#34;</span>, stdin );
+</span></span><span style="display:flex;"><span>    freopen(<span style="color:#e6db74">&#34;main.out&#34;</span>, <span style="color:#e6db74">&#34;w&#34;</span>, stdout);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#endif
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, n <span style="color:#f92672">=</span> (cin <span style="color:#f92672">&gt;&gt;</span> n, n); i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        code();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></article>
  
       
 
@@ -329,6 +440,10 @@ https://github.com/alex-shpak/hugo-book
       </footer>
 
       
+  
+  <div class="book-comments">
+
+</div>
   
  
 

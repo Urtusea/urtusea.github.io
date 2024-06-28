@@ -12,7 +12,14 @@
       <link>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/a/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/a/</guid>
-      <description></description>
+      <description>前言： # Links: A. Catch the Coin Codeforces: 待更新 Clist: \(784\) Tags: 模拟 时间复杂度: \(O(1)\) 题意： # 给你一个硬币的坐标 \((x, y)\) ，你初始位置在 \((0, 0)\) ，对于每一时刻均可以向满足 \(|x&amp;#39;-x| &amp;#43; |y&amp;#39;-y| \le 2\) 的点 \((x&amp;#39;, y&amp;#39;)\) 移动，硬币在你移动后坐标变为 \((x, y - 1)\) ，问你是否有一时刻可以接到硬币&#xA;思路： # 观察可以发现，只有当 \(y \geq -1\) 时才满足条件&#xA;代码： # #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; void code(/* Copyright by Urtusea */) { int x, y; cin &amp;gt;&amp;gt; x &amp;gt;&amp;gt; y; if (y &amp;gt;= -1) cout &amp;lt;&amp;lt; &amp;#34;YES\n&amp;#34;; else cout &amp;lt;&amp;lt; &amp;#34;NO\n&amp;#34;; } int main(int argc, char *argv[], char *envp[]) { cin.</description>
+    </item>
+    <item>
+      <title>B</title>
+      <link>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/b/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/b/</guid>
+      <description> 前言： # 题意： # 思路： # 代码： # </description>
     </item>
   </channel>
 </rss>

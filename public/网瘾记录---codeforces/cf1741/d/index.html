@@ -3,21 +3,17 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="前言： # D. Masha and a Beautiful Tree Codeforces: 1300 Clist: 1286 Tags: 分治，DFS 时间复杂度: $O(n \space log \space n)$ 题意： # 有一颗深度为 $n$ 的满二叉树，现给你其 $2^n$ 个叶子节点，叶子节点的权值构成一个长度为 $2^n$ 的排列 $p$，从左到右依次为 $p_1, p_2, p_3, &hellip;, p_{2^n}$
-对于每一次操作你只能操作非叶子节点，并交换该节点的两颗子树，问你是否有可能将叶子节点的排列 $p$ 变为单调递增的排列
-即满足 $\forall 1 \le i \le 2^n - 1, p[i] &lt; p[i &#43; 1]$
-思路： # 不妨首先来看小部分操作是如何满足条件的：
-当 $n = 1$ 时，设 $p = [2, 1]$，显然交换 $p_1$ 与 $p_2$ 即可，交换后 $p&rsquo; = [1, 2]$ 满足条件 当 $n = 2$ 时，设 $p = [3, 4, 2, 1]$，将其分割为 $p = [3, 4, | 2, 1]$，对于右边我们则转换为了 $n = 1$ 时的小问题，直接交换即可，问题变成了 $p = [3, 4, | 1, 2]$，我们也只能交换这一个相邻的区间，则 $p&rsquo; = [1, 2, | 3, 4]$ 满足条件 容易发现的，只需要从小的叶子区间维护到大的叶子区间即可">
+<meta name="description" content="前言： # Links: D. Masha and a Beautiful Tree Codeforces: \(1300\) Clist: \(1286\) Tags: 分治，DFS 时间复杂度: \(O(n \space log \space n)\) 题意： # 有一颗深度为 \(n\) 的满二叉树，现给你其 \(2^n\) 个叶子节点，叶子节点的权值构成一个长度为 \(2^n\) 的排列 \(p\) ，从左到右依次为 \(p_1, p_2, p_3, ..., p_{2^n}\) 对于每一次操作你只能操作非叶子节点，并交换该节点的两颗子树，问你是否有可能将叶子节点的排列 $p$ 变为单调递增的排列
+即满足 \(\forall 1 \le i \le 2^n - 1, p[i] &lt; p[i &#43; 1]\) 思路： # 不妨首先来看小部分操作是如何满足条件的：
+当 \(n = 1\) 时，设 \(p = [2, 1]\) ，显然交换 \(p_1\) 与 \(p_2\) 即可，交换后 \(p&#39; = [1, 2]\) 满足条件 当 \(n = 2\) 时，设 \(p = [3, 4, 2, 1]\) ，将其分割为 \(p = [3, 4, | 2, 1]\) ，对于右边我们则转换为了 \(n = 1\) 时的小问题，直接交换即可，问题变成了 \(p = [3, 4, | 1, 2]\) ，我们也只能交换这一个相邻的区间，则 \(p&#39; = [1, 2, | 3, 4]\) 满足条件 容易发现的，只需要从小的叶子区间维护到大的叶子区间即可">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1741/d/">
   <meta property="og:site_name" content="Urtusea CP-Algorithm">
   <meta property="og:title" content="D">
-  <meta property="og:description" content="前言： # D. Masha and a Beautiful Tree Codeforces: 1300 Clist: 1286 Tags: 分治，DFS 时间复杂度: $O(n \space log \space n)$ 题意： # 有一颗深度为 $n$ 的满二叉树，现给你其 $2^n$ 个叶子节点，叶子节点的权值构成一个长度为 $2^n$ 的排列 $p$，从左到右依次为 $p_1, p_2, p_3, …, p_{2^n}$
-对于每一次操作你只能操作非叶子节点，并交换该节点的两颗子树，问你是否有可能将叶子节点的排列 $p$ 变为单调递增的排列
-即满足 $\forall 1 \le i \le 2^n - 1, p[i] &lt; p[i &#43; 1]$
-思路： # 不妨首先来看小部分操作是如何满足条件的：
-当 $n = 1$ 时，设 $p = [2, 1]$，显然交换 $p_1$ 与 $p_2$ 即可，交换后 $p’ = [1, 2]$ 满足条件 当 $n = 2$ 时，设 $p = [3, 4, 2, 1]$，将其分割为 $p = [3, 4, | 2, 1]$，对于右边我们则转换为了 $n = 1$ 时的小问题，直接交换即可，问题变成了 $p = [3, 4, | 1, 2]$，我们也只能交换这一个相邻的区间，则 $p’ = [1, 2, | 3, 4]$ 满足条件 容易发现的，只需要从小的叶子区间维护到大的叶子区间即可">
+  <meta property="og:description" content="前言： # Links: D. Masha and a Beautiful Tree Codeforces: \(1300\) Clist: \(1286\) Tags: 分治，DFS 时间复杂度: \(O(n \space log \space n)\) 题意： # 有一颗深度为 \(n\) 的满二叉树，现给你其 \(2^n\) 个叶子节点，叶子节点的权值构成一个长度为 \(2^n\) 的排列 \(p\) ，从左到右依次为 \(p_1, p_2, p_3, ..., p_{2^n}\) 对于每一次操作你只能操作非叶子节点，并交换该节点的两颗子树，问你是否有可能将叶子节点的排列 $p$ 变为单调递增的排列
+即满足 \(\forall 1 \le i \le 2^n - 1, p[i] &lt; p[i &#43; 1]\) 思路： # 不妨首先来看小部分操作是如何满足条件的：
+当 \(n = 1\) 时，设 \(p = [2, 1]\) ，显然交换 \(p_1\) 与 \(p_2\) 即可，交换后 \(p&#39; = [1, 2]\) 满足条件 当 \(n = 2\) 时，设 \(p = [3, 4, 2, 1]\) ，将其分割为 \(p = [3, 4, | 2, 1]\) ，对于右边我们则转换为了 \(n = 1\) 时的小问题，直接交换即可，问题变成了 \(p = [3, 4, | 1, 2]\) ，我们也只能交换这一个相邻的区间，则 \(p&#39; = [1, 2, | 3, 4]\) 满足条件 容易发现的，只需要从小的叶子区间维护到大的叶子区间即可">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="网瘾记录---codeforces">
@@ -27,7 +23,7 @@
 <link rel="canonical" href="http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1741/d/">
 <link rel="stylesheet" href="/book.min.484e3cdc2f6e660df5c808d0eaf99198acde922db9728bc590485956e896548a.css" integrity="sha256-SE483C9uZg31yAjQ6vmRmKzeki25covFkEhZVuiWVIo=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/zh.search.min.ffc0f2c0948b8fa171a45d3bd0dea546686116c29f4aab1d2b1cd1be7379e466.js" integrity="sha256-/8DywJSLj6FxpF070N6lRmhhFsKfSqsdKxzRvnN55GY=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.a34e576cb746a28f1976c9471f37c3f67d602c3da5da61831dce0d910be9d21e.js" integrity="sha256-o05XbLdGoo8ZdslHHzfD9n1gLD2l2mGDHc4NkQvp0h4=" crossorigin="anonymous"></script>
 
   
 
@@ -187,6 +183,30 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     
       
+        <li>
+          
+  
+  
+
+  
+    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/a/" class="">A</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/b/" class="">B</a>
+  
+
+        </li>
+      
     
   </ul>
 
@@ -319,27 +339,90 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#%e5%89%8d%e8%a8%80">#</a>
 </h1>
 <ul>
-<li><a href="https://codeforces.com/contest/1741/problem/D">D. Masha and a Beautiful Tree</a></li>
-<li>Codeforces: 1300</li>
-<li>Clist: 1286</li>
+<li>Links: <a href="https://codeforces.com/contest/1741/problem/D">D. Masha and a Beautiful Tree</a></li>
+<li>Codeforces: 
+<link rel="stylesheet" href="/katex/katex.min.css" />
+<script defer src="/katex/katex.min.js"></script>
+<script defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script><span>
+  \(1300\)
+</span>
+</li>
+<li>Clist: <span>
+  \(1286\)
+</span>
+</li>
 <li>Tags: 分治，DFS</li>
-<li>时间复杂度: $O(n \space log \space n)$</li>
+<li>时间复杂度: <span>
+  \(O(n \space log \space n)\)
+</span>
+</li>
 </ul>
 <h1 id="题意">
   题意：
   <a class="anchor" href="#%e9%a2%98%e6%84%8f">#</a>
 </h1>
-<p>有一颗深度为 $n$ 的满二叉树，现给你其 $2^n$ 个叶子节点，叶子节点的权值构成一个长度为 $2^n$ 的排列 $p$，从左到右依次为 $p_1, p_2, p_3, &hellip;, p_{2^n}$</p>
+<p>有一颗深度为 <span>
+  \(n\)
+</span>
+ 的满二叉树，现给你其 <span>
+  \(2^n\)
+</span>
+ 个叶子节点，叶子节点的权值构成一个长度为 <span>
+  \(2^n\)
+</span>
+ 的排列 <span>
+  \(p\)
+</span>
+，从左到右依次为 <span>
+  \(p_1, p_2, p_3, ..., p_{2^n}\)
+</span>
+</p>
 <p>对于每一次操作你只能操作非叶子节点，并交换该节点的两颗子树，问你是否有可能将叶子节点的排列 $p$ 变为单调递增的排列</p>
-<p>即满足 $\forall 1 \le i \le 2^n - 1, p[i] &lt; p[i + 1]$</p>
+<p>即满足 <span>
+  \(\forall 1 \le i \le 2^n - 1, p[i] &lt; p[i &#43; 1]\)
+</span>
+</p>
 <h1 id="思路">
   思路：
   <a class="anchor" href="#%e6%80%9d%e8%b7%af">#</a>
 </h1>
 <p>不妨首先来看小部分操作是如何满足条件的：</p>
 <ul>
-<li>当 $n = 1$ 时，设 $p = [2, 1]$，显然交换 $p_1$ 与 $p_2$ 即可，交换后 $p&rsquo; = [1, 2]$ 满足条件</li>
-<li>当 $n = 2$ 时，设 $p = [3, 4, 2, 1]$，将其分割为 $p = [3, 4, | 2, 1]$，对于右边我们则转换为了 $n = 1$ 时的小问题，直接交换即可，问题变成了 $p = [3, 4, | 1, 2]$，我们也只能交换这一个相邻的区间，则 $p&rsquo; = [1, 2, | 3, 4]$ 满足条件</li>
+<li>当 <span>
+  \(n = 1\)
+</span>
+ 时，设 <span>
+  \(p = [2, 1]\)
+</span>
+，显然交换 <span>
+  \(p_1\)
+</span>
+ 与 <span>
+  \(p_2\)
+</span>
+ 即可，交换后 <span>
+  \(p&#39; = [1, 2]\)
+</span>
+ 满足条件</li>
+<li>当 <span>
+  \(n = 2\)
+</span>
+ 时，设 <span>
+  \(p = [3, 4, 2, 1]\)
+</span>
+，将其分割为 <span>
+  \(p = [3, 4, | 2, 1]\)
+</span>
+，对于右边我们则转换为了 <span>
+  \(n = 1\)
+</span>
+ 时的小问题，直接交换即可，问题变成了 <span>
+  \(p = [3, 4, | 1, 2]\)
+</span>
+，我们也只能交换这一个相邻的区间，则 <span>
+  \(p&#39; = [1, 2, | 3, 4]\)
+</span>
+ 满足条件</li>
 </ul>
 <p>容易发现的，只需要从小的叶子区间维护到大的叶子区间即可</p>
 <h1 id="代码">
