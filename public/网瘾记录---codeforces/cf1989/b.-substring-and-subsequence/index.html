@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="前言： # Links: B. Substring and Subsequence Codeforces: 待更新 Clist: \(1142\) Tags: 最长递增子序列，双指针 时间复杂度: \(O(|a|·|b|)\) 题意： # 对于一个字符串 \(s\) ，给你其一子串 \(a\) 和一子序列 \(b\) ，询问你满足条件的 \(|s|\) 的最小值
+思路： # 考虑 DP，令 \(f(i)\) 为 以 \(b_i\) 开头，与 \(a\) 匹配的最长公共子序列，不难得到答案为： \(|s| = a &#43; b - min(f(i))\) 代码： # #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; void code(/* Copyright by Urtusea */) { string a, b; cin &gt;&gt; a &gt;&gt; b; int n = a.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/b.-substring-and-subsequence/">
+  <meta property="og:site_name" content="Urtusea CP-Algorithm">
+  <meta property="og:title" content="B. Substring and Subsequence">
+  <meta property="og:description" content="前言： # Links: B. Substring and Subsequence Codeforces: 待更新 Clist: \(1142\) Tags: 最长递增子序列，双指针 时间复杂度: \(O(|a|·|b|)\) 题意： # 对于一个字符串 \(s\) ，给你其一子串 \(a\) 和一子序列 \(b\) ，询问你满足条件的 \(|s|\) 的最小值
+思路： # 考虑 DP，令 \(f(i)\) 为 以 \(b_i\) 开头，与 \(a\) 匹配的最长公共子序列，不难得到答案为： \(|s| = a &#43; b - min(f(i))\) 代码： # #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; void code(/* Copyright by Urtusea */) { string a, b; cin &gt;&gt; a &gt;&gt; b; int n = a.">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="网瘾记录---codeforces">
+<title>B. Substring and Subsequence | Urtusea CP-Algorithm</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="canonical" href="http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/b.-substring-and-subsequence/">
+<link rel="stylesheet" href="/book.min.484e3cdc2f6e660df5c808d0eaf99198acde922db9728bc590485956e896548a.css" integrity="sha256-SE483C9uZg31yAjQ6vmRmKzeki25covFkEhZVuiWVIo=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/zh.search.min.4a4e6bd7ee845ea4921591efac1cf4b8a07524a4998d3315b6fcdf90b682beea.js" integrity="sha256-Sk5r1&#43;6EXqSSFZHvrBz0uKB1JKSZjTMVtvzfkLaCvuo=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Urtusea CP-Algorithm</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b1a125cd9aef7de0a07fc730b569deb3" class="toggle"  />
+    <label for="section-b1a125cd9aef7de0a07fc730b569deb3" class="flex justify-between">
+      <a role="button" class="">我的模板</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bf7eac631e7605708c938ffda0711293" class="toggle"  />
+    <label for="section-bf7eac631e7605708c938ffda0711293" class="flex justify-between">
+      <a role="button" class="">网瘾记录 Atcoder</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-644c88a20e8018da6c5b7fcc27871cba" class="toggle" checked />
+    <label for="section-644c88a20e8018da6c5b7fcc27871cba" class="flex justify-between">
+      <a role="button" class="">网瘾记录 Codeforces</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-83b992410f7aeea4313cbbecaa868d52" class="toggle"  />
+    <label for="section-83b992410f7aeea4313cbbecaa868d52" class="flex justify-between">
+      <a role="button" class="">CF1385</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1385/d.-a-good-string/" class="">D. a-Good String</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-39fc0fd848a60e202ca1db06e8fefc60" class="toggle"  />
+    <label for="section-39fc0fd848a60e202ca1db06e8fefc60" class="flex justify-between">
+      <a role="button" class="">CF1741</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1741/d.-masha-and-a-beautiful-tree/" class="">D. Masha and a Beautiful Tree</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-551f1e63283b15bbcd845b7e6b9cf53c" class="toggle" checked />
+    <label for="section-551f1e63283b15bbcd845b7e6b9cf53c" class="flex justify-between">
+      <a role="button" class="">CF1989</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/a.-catch-the-coin/" class="">A. Catch the Coin</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/b.-substring-and-subsequence/" class="active">B. Substring and Subsequence</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/c/" class="">C</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/f/" class="">D</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/e/" class="">E</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/d/" class="">F</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-42a1c7a9a0547b9a97e4e772cdd7aa1c" class="toggle"  />
+    <label for="section-42a1c7a9a0547b9a97e4e772cdd7aa1c" class="flex justify-between">
+      <a role="button" class="">网瘾记录 Luogu</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-48fbff946ea0fcf725c5b0f74b8e7503" class="toggle"  />
+    <label for="section-48fbff946ea0fcf725c5b0f74b8e7503" class="flex justify-between">
+      <a role="button" class="">题单列表</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/%E9%A2%98%E5%8D%95%E5%88%97%E8%A1%A8/divide_and_conquer/" class="">入门算法：分治</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>B. Substring and Subsequence</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="前言">
+  前言：
+  <a class="anchor" href="#%e5%89%8d%e8%a8%80">#</a>
+</h1>
+<ul>
+<li>Links: <a href="https://codeforces.com/contest/1989/problem/B">B. Substring and Subsequence</a></li>
+<li>Codeforces: 待更新</li>
+<li>Clist: 
+<link rel="stylesheet" href="/katex/katex.min.css" />
+<script defer src="/katex/katex.min.js"></script>
+<script defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script><span>
+  \(1142\)
+</span>
+</li>
+<li>Tags: 最长递增子序列，双指针</li>
+<li>时间复杂度: <span>
+  \(O(|a|·|b|)\)
+</span>
+</li>
+</ul>
+<h1 id="题意">
+  题意：
+  <a class="anchor" href="#%e9%a2%98%e6%84%8f">#</a>
+</h1>
+<p>对于一个字符串 <span>
+  \(s\)
+</span>
+，给你其一子串 <span>
+  \(a\)
+</span>
+ 和一子序列 <span>
+  \(b\)
+</span>
+，询问你满足条件的 <span>
+  \(|s|\)
+</span>
+ 的最小值</p>
+<h1 id="思路">
+  思路：
+  <a class="anchor" href="#%e6%80%9d%e8%b7%af">#</a>
+</h1>
+<p>考虑 DP，令 <span>
+  \(f(i)\)
+</span>
+ 为 以 <span>
+  \(b_i\)
+</span>
+ 开头，与 <span>
+  \(a\)
+</span>
+ 匹配的最长公共子序列，不难得到答案为：<span>
+  \(|s| = a &#43; b - min(f(i))\)
+</span>
+</p>
+<h1 id="代码">
+  代码：
+  <a class="anchor" href="#%e4%bb%a3%e7%a0%81">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">code</span>(<span style="color:#75715e">/* Copyright by Urtusea */</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    string a, b;
+</span></span><span style="display:flex;"><span>    cin <span style="color:#f92672">&gt;&gt;</span> a <span style="color:#f92672">&gt;&gt;</span> b;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> a.size(), m <span style="color:#f92672">=</span> b.size();
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 将字符串变为 &#34;#a&#34;，使得其下标从 1 开始，个人习惯罢了
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;#&#39;</span> <span style="color:#f92672">+</span> a;
+</span></span><span style="display:flex;"><span>    b <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;#&#39;</span> <span style="color:#f92672">+</span> b;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    vector f(m <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0LL</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> m; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; j <span style="color:#f92672">&lt;=</span> n; j<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (f[i] <span style="color:#f92672">+</span> i <span style="color:#f92672">&gt;</span> m) <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (a[j] <span style="color:#f92672">==</span> b[f[i] <span style="color:#f92672">+</span> i]) f[i]<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cout <span style="color:#f92672">&lt;&lt;</span> n <span style="color:#f92672">+</span> m <span style="color:#f92672">-</span> <span style="color:#f92672">*</span>max_element(f.begin(), f.end()) <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#39;\n&#39;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc, <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>argv[], <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>envp[])
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    cin.tie(<span style="color:#66d9ef">nullptr</span>)<span style="color:#f92672">-&gt;</span>sync_with_stdio(false);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#ifdef Urtusea
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    freopen(<span style="color:#e6db74">&#34;main.in&#34;</span>,  <span style="color:#e6db74">&#34;r&#34;</span>, stdin );
+</span></span><span style="display:flex;"><span>    freopen(<span style="color:#e6db74">&#34;main.out&#34;</span>, <span style="color:#e6db74">&#34;w&#34;</span>, stdout);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#endif
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, n <span style="color:#f92672">=</span> (cin <span style="color:#f92672">&gt;&gt;</span> n, n); i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        code();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

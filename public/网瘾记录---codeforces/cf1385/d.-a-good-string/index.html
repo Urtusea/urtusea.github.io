@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="前言： # Links: D. a-Good String Codeforces: \(1500\) Clist: \(1527\) Tags: 分治，模拟 时间复杂度: \(nlogn\) 题意： # 给你一个长度为 \(n\) 的字符串 \(s\) ，定义 \(char(s)\) 为 \(s\) 的字符集合大小，并给你一个 \(good(s, c)\) 串定义：
+\(good(s, c) =\begin{cases}if (|s| = 1 \ and \ s_1 = c)\\if (char(s_1s_2...s_{n/2}) = 1 \ and \ s_1 = c \ and \ good(s_{n/2&#43;1}...s_n, c &#43; 1))\\if (char(s_{n/2&#43;1}...s_n) = 1 \ and \ s_n = c \ and \ good(s_1s_2.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1385/d.-a-good-string/">
+  <meta property="og:site_name" content="Urtusea CP-Algorithm">
+  <meta property="og:title" content="D. a-Good String">
+  <meta property="og:description" content="前言： # Links: D. a-Good String Codeforces: \(1500\) Clist: \(1527\) Tags: 分治，模拟 时间复杂度: \(nlogn\) 题意： # 给你一个长度为 \(n\) 的字符串 \(s\) ，定义 \(char(s)\) 为 \(s\) 的字符集合大小，并给你一个 \(good(s, c)\) 串定义：
+\(good(s, c) =\begin{cases}if (|s| = 1 \ and \ s_1 = c)\\if (char(s_1s_2...s_{n/2}) = 1 \ and \ s_1 = c \ and \ good(s_{n/2&#43;1}...s_n, c &#43; 1))\\if (char(s_{n/2&#43;1}...s_n) = 1 \ and \ s_n = c \ and \ good(s_1s_2.">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="网瘾记录---codeforces">
+<title>D. a-Good String | Urtusea CP-Algorithm</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="canonical" href="http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1385/d.-a-good-string/">
+<link rel="stylesheet" href="/book.min.484e3cdc2f6e660df5c808d0eaf99198acde922db9728bc590485956e896548a.css" integrity="sha256-SE483C9uZg31yAjQ6vmRmKzeki25covFkEhZVuiWVIo=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/zh.search.min.4a4e6bd7ee845ea4921591efac1cf4b8a07524a4998d3315b6fcdf90b682beea.js" integrity="sha256-Sk5r1&#43;6EXqSSFZHvrBz0uKB1JKSZjTMVtvzfkLaCvuo=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Urtusea CP-Algorithm</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b1a125cd9aef7de0a07fc730b569deb3" class="toggle"  />
+    <label for="section-b1a125cd9aef7de0a07fc730b569deb3" class="flex justify-between">
+      <a role="button" class="">我的模板</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bf7eac631e7605708c938ffda0711293" class="toggle"  />
+    <label for="section-bf7eac631e7605708c938ffda0711293" class="flex justify-between">
+      <a role="button" class="">网瘾记录 Atcoder</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-644c88a20e8018da6c5b7fcc27871cba" class="toggle" checked />
+    <label for="section-644c88a20e8018da6c5b7fcc27871cba" class="flex justify-between">
+      <a role="button" class="">网瘾记录 Codeforces</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-83b992410f7aeea4313cbbecaa868d52" class="toggle" checked />
+    <label for="section-83b992410f7aeea4313cbbecaa868d52" class="flex justify-between">
+      <a role="button" class="">CF1385</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1385/d.-a-good-string/" class="active">D. a-Good String</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-39fc0fd848a60e202ca1db06e8fefc60" class="toggle"  />
+    <label for="section-39fc0fd848a60e202ca1db06e8fefc60" class="flex justify-between">
+      <a role="button" class="">CF1741</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1741/d.-masha-and-a-beautiful-tree/" class="">D. Masha and a Beautiful Tree</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-551f1e63283b15bbcd845b7e6b9cf53c" class="toggle"  />
+    <label for="section-551f1e63283b15bbcd845b7e6b9cf53c" class="flex justify-between">
+      <a role="button" class="">CF1989</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/a.-catch-the-coin/" class="">A. Catch the Coin</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/b.-substring-and-subsequence/" class="">B. Substring and Subsequence</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/c/" class="">C</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/f/" class="">D</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/e/" class="">E</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/d/" class="">F</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-42a1c7a9a0547b9a97e4e772cdd7aa1c" class="toggle"  />
+    <label for="section-42a1c7a9a0547b9a97e4e772cdd7aa1c" class="flex justify-between">
+      <a role="button" class="">网瘾记录 Luogu</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-48fbff946ea0fcf725c5b0f74b8e7503" class="toggle"  />
+    <label for="section-48fbff946ea0fcf725c5b0f74b8e7503" class="flex justify-between">
+      <a role="button" class="">题单列表</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/%E9%A2%98%E5%8D%95%E5%88%97%E8%A1%A8/divide_and_conquer/" class="">入门算法：分治</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>D. a-Good String</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="前言">
+  前言：
+  <a class="anchor" href="#%e5%89%8d%e8%a8%80">#</a>
+</h1>
+<ul>
+<li>Links: <a href="https://codeforces.com/contest/1385/problem/D">D. a-Good String</a></li>
+<li>Codeforces: 
+<link rel="stylesheet" href="/katex/katex.min.css" />
+<script defer src="/katex/katex.min.js"></script>
+<script defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script><span>
+  \(1500\)
+</span>
+</li>
+<li>Clist: <span>
+  \(1527\)
+</span>
+</li>
+<li>Tags: 分治，模拟</li>
+<li>时间复杂度: <span>
+  \(nlogn\)
+</span>
+</li>
+</ul>
+<h1 id="题意">
+  题意：
+  <a class="anchor" href="#%e9%a2%98%e6%84%8f">#</a>
+</h1>
+<p>给你一个长度为 <span>
+  \(n\)
+</span>
+ 的字符串 <span>
+  \(s\)
+</span>
+，定义 <span>
+  \(char(s)\)
+</span>
+ 为 <span>
+  \(s\)
+</span>
+ 的字符集合大小，并给你一个 <span>
+  \(good(s, c)\)
+</span>
+ 串定义：</p>
+<span>
+  \(
+good(s, c) =
+    \begin{cases}
+    if (|s| = 1 \ and \ s_1 = c)
+    \\
+    if (char(s_1s_2...s_{n/2}) = 1 \ and \ s_1 = c \ and \ good(s_{n/2&#43;1}...s_n, c &#43; 1))
+    \\
+    if (char(s_{n/2&#43;1}...s_n) = 1 \ and \ s_n = c \ and \ good(s_1s_2...s_{n/2}, c &#43; 1))
+    \end{cases}\)
+</span>
+
+<h1 id="思路">
+  思路：
+  <a class="anchor" href="#%e6%80%9d%e8%b7%af">#</a>
+</h1>
+<h1 id="代码">
+  代码：
+  <a class="anchor" href="#%e4%bb%a3%e7%a0%81">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

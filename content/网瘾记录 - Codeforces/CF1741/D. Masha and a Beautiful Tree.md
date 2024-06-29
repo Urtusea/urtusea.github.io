@@ -1,5 +1,5 @@
 ---
-title: "D"
+title: "D. Masha and a Beautiful Tree"
 ---
 
 # 前言：
@@ -8,7 +8,7 @@ title: "D"
 - Codeforces: {{<katex>}}1300{{</katex>}}
 - Clist: {{<katex>}}1286{{</katex>}}
 - Tags: 分治，DFS
-- 时间复杂度: {{<katex>}}O(n \space log \space n){{</katex>}}
+- 时间复杂度: {{<katex>}}O(nlogn){{</katex>}}
 
 
 # 题意：

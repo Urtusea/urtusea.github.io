@@ -8,17 +8,45 @@
     <language>zh-cn</language>
     <atom:link href="http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>A</title>
-      <link>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/a/</link>
+      <title>A. Catch the Coin</title>
+      <link>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/a.-catch-the-coin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/a/</guid>
-      <description>前言： # Links: A. Catch the Coin Codeforces: 待更新 Clist: \(784\) Tags: 模拟 时间复杂度: \(O(1)\) 题意： # 给你一个硬币的坐标 \((x, y)\) ，你初始位置在 \((0, 0)\) ，对于每一时刻均可以向满足 \(|x&amp;#39;-x| &amp;#43; |y&amp;#39;-y| \le 2\) 的点 \((x&amp;#39;, y&amp;#39;)\) 移动，硬币在你移动后坐标变为 \((x, y - 1)\) ，问你是否有一时刻可以接到硬币&#xA;思路： # 观察可以发现，只有当 \(y \geq -1\) 时才满足条件&#xA;代码： # #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; void code(/* Copyright by Urtusea */) { int x, y; cin &amp;gt;&amp;gt; x &amp;gt;&amp;gt; y; if (y &amp;gt;= -1) cout &amp;lt;&amp;lt; &amp;#34;YES\n&amp;#34;; else cout &amp;lt;&amp;lt; &amp;#34;NO\n&amp;#34;; } int main(int argc, char *argv[], char *envp[]) { cin.</description>
+      <guid>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/a.-catch-the-coin/</guid>
+      <description>前言： # Links: A. Catch the Coin Codeforces: 待更新 Clist: \(784\) Tags: 模拟 时间复杂度: \(O(1)\) 题意： # 给你一个硬币的坐标 \((x, y)\) ，你初始位置在 \((0, 0)\) ，对于每一时刻均可以向满足 \(|x&amp;#39;-x| &amp;#43; |y&amp;#39;-y| \le 2\) 的点 \((x&amp;#39;, y&amp;#39;)\) 移动，硬币在你移动后坐标变为 \((x, y - 1)\) ，问你是否有一时刻可以接到硬币&#xA;思路： # 观察可以发现，只有当 \(y \geq -1\) 时才满足条件&#xA;代码： # #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; void code(/* Copyright by Urtusea */) { int x, y; cin &amp;gt;&amp;gt; x &amp;gt;&amp;gt; y; // 只需判断 y &amp;gt;= -1 即可 if (y &amp;gt;= -1) cout &amp;lt;&amp;lt; &amp;#34;YES\n&amp;#34;; else cout &amp;lt;&amp;lt; &amp;#34;NO\n&amp;#34;; } int main(int argc, char *argv[], char *envp[]) { cin.</description>
     </item>
     <item>
-      <title>B</title>
-      <link>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/b/</link>
+      <title>B. Substring and Subsequence</title>
+      <link>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/b.-substring-and-subsequence/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/b/</guid>
+      <guid>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/b.-substring-and-subsequence/</guid>
+      <description>前言： # Links: B. Substring and Subsequence Codeforces: 待更新 Clist: \(1142\) Tags: 最长递增子序列，双指针 时间复杂度: \(O(|a|·|b|)\) 题意： # 对于一个字符串 \(s\) ，给你其一子串 \(a\) 和一子序列 \(b\) ，询问你满足条件的 \(|s|\) 的最小值&#xA;思路： # 考虑 DP，令 \(f(i)\) 为 以 \(b_i\) 开头，与 \(a\) 匹配的最长公共子序列，不难得到答案为： \(|s| = a &amp;#43; b - min(f(i))\) 代码： # #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; void code(/* Copyright by Urtusea */) { string a, b; cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b; int n = a.</description>
+    </item>
+    <item>
+      <title>C</title>
+      <link>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/c/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/c/</guid>
+      <description> 前言： # 题意： # 思路： # 代码： # </description>
+    </item>
+    <item>
+      <title>D</title>
+      <link>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/f/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/f/</guid>
+      <description> 前言： # 题意： # 思路： # 代码： # </description>
+    </item>
+    <item>
+      <title>E</title>
+      <link>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/e/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/e/</guid>
+      <description> 前言： # 题意： # 思路： # 代码： # </description>
+    </item>
+    <item>
+      <title>F</title>
+      <link>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/d/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/d/</guid>
       <description> 前言： # 题意： # 思路： # 代码： # </description>
     </item>
   </channel>

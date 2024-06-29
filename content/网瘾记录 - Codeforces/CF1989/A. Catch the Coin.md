@@ -1,5 +1,5 @@
 ---
-title: "A"
+title: "A. Catch the Coin"
 ---
 
 # 前言：
@@ -29,6 +29,7 @@ void code(/* Copyright by Urtusea */)
     int x, y;
     cin >> x >> y;
 
+    // 只需判断 y >= -1 即可
     if (y >= -1)
         cout << "YES\n";
     else
