@@ -5,7 +5,7 @@ title: "A. Catch the Coin"
 # 前言：
 
 - Links: [A. Catch the Coin](https://codeforces.com/contest/1989/problem/A)
-- Codeforces: 待更新
+- Codeforces: {{<katex>}}800{{</katex>}}
 - Clist: {{<katex>}}784{{</katex>}}
 - Tags: 模拟
 - 时间复杂度: {{<katex>}}O(1){{</katex>}}

@@ -5,7 +5,7 @@ title: "B. Substring and Subsequence"
 # 前言：
 
 - Links: [B. Substring and Subsequence](https://codeforces.com/contest/1989/problem/B)
-- Codeforces: 待更新
+- Codeforces: {{<katex>}}1200{{</katex>}}
 - Clist: {{<katex>}}1142{{</katex>}}
 - Tags: 最长递增子序列，双指针
 - 时间复杂度: {{<katex>}}O(|a|·|b|){{</katex>}}

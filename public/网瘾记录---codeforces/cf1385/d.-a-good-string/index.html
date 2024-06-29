@@ -3,15 +3,15 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="前言： # Links: D. a-Good String Codeforces: \(1500\) Clist: \(1527\) Tags: 分治，模拟 时间复杂度: \(nlogn\) 题意： # 给你一个长度为 \(n\) 的字符串 \(s\) ，定义 \(char(s)\) 为 \(s\) 的字符集合大小，并给你一个 \(good(s, c)\) 串定义：
-\(good(s, c) =\begin{cases}if (|s| = 1 \ and \ s_1 = c)\\if (char(s_1s_2...s_{n/2}) = 1 \ and \ s_1 = c \ and \ good(s_{n/2&#43;1}...s_n, c &#43; 1))\\if (char(s_{n/2&#43;1}...s_n) = 1 \ and \ s_n = c \ and \ good(s_1s_2.">
+<meta name="description" content="前言： # Links: D. a-Good String Codeforces: \(1500\) Clist: \(1527\) Tags: 分治，模拟，DFS 时间复杂度: \(nlogn\) 题意： # 给你一个长度为 \(n\) 的字符串 \(s\) ，定义 \(char(s)\) 为 \(s\) 的字符集合大小，并给你一个 \(good(s, c)\) 串定义：
+\(good(s, c) =\begin{cases}if \ \ |s| = 1 \ and \ s_1 = c\\if \ \ char(s_1s_2...s_{n/2}) = 1 \ and \ s_1 = c \ and \ good(s_{n/2&#43;1}...s_n, c &#43; 1)\\if \ \ char(s_{n/2&#43;1}.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1385/d.-a-good-string/">
   <meta property="og:site_name" content="Urtusea CP-Algorithm">
   <meta property="og:title" content="D. a-Good String">
-  <meta property="og:description" content="前言： # Links: D. a-Good String Codeforces: \(1500\) Clist: \(1527\) Tags: 分治，模拟 时间复杂度: \(nlogn\) 题意： # 给你一个长度为 \(n\) 的字符串 \(s\) ，定义 \(char(s)\) 为 \(s\) 的字符集合大小，并给你一个 \(good(s, c)\) 串定义：
-\(good(s, c) =\begin{cases}if (|s| = 1 \ and \ s_1 = c)\\if (char(s_1s_2...s_{n/2}) = 1 \ and \ s_1 = c \ and \ good(s_{n/2&#43;1}...s_n, c &#43; 1))\\if (char(s_{n/2&#43;1}...s_n) = 1 \ and \ s_n = c \ and \ good(s_1s_2.">
+  <meta property="og:description" content="前言： # Links: D. a-Good String Codeforces: \(1500\) Clist: \(1527\) Tags: 分治，模拟，DFS 时间复杂度: \(nlogn\) 题意： # 给你一个长度为 \(n\) 的字符串 \(s\) ，定义 \(char(s)\) 为 \(s\) 的字符集合大小，并给你一个 \(good(s, c)\) 串定义：
+\(good(s, c) =\begin{cases}if \ \ |s| = 1 \ and \ s_1 = c\\if \ \ char(s_1s_2...s_{n/2}) = 1 \ and \ s_1 = c \ and \ good(s_{n/2&#43;1}...s_n, c &#43; 1)\\if \ \ char(s_{n/2&#43;1}.">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="网瘾记录---codeforces">
@@ -21,7 +21,7 @@
 <link rel="canonical" href="http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1385/d.-a-good-string/">
 <link rel="stylesheet" href="/book.min.484e3cdc2f6e660df5c808d0eaf99198acde922db9728bc590485956e896548a.css" integrity="sha256-SE483C9uZg31yAjQ6vmRmKzeki25covFkEhZVuiWVIo=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/zh.search.min.4a4e6bd7ee845ea4921591efac1cf4b8a07524a4998d3315b6fcdf90b682beea.js" integrity="sha256-Sk5r1&#43;6EXqSSFZHvrBz0uKB1JKSZjTMVtvzfkLaCvuo=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.51d640dffc030bbac1566aa460aae29de01ff164133fe6727cffa2edbba754d8.js" integrity="sha256-UdZA3/wDC7rBVmqkYKrineAf8WQTP&#43;ZyfP&#43;i7bunVNg=" crossorigin="anonymous"></script>
 
   
 
@@ -247,46 +247,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/c/" class="">C</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/f/" class="">D</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/e/" class="">E</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/d/" class="">F</a>
+    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/c.-two-movies/" class="">C. Two Movies</a>
   
 
         </li>
@@ -338,19 +299,6 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/%E9%A2%98%E5%8D%95%E5%88%97%E8%A1%A8/divide_and_conquer/" class="">入门算法：分治</a>
-  
-
-        </li>
-      
     
   </ul>
 
@@ -435,7 +383,7 @@ https://github.com/alex-shpak/hugo-book
   \(1527\)
 </span>
 </li>
-<li>Tags: 分治，模拟</li>
+<li>Tags: 分治，模拟，DFS</li>
 <li>时间复杂度: <span>
   \(nlogn\)
 </span>
@@ -465,23 +413,95 @@ https://github.com/alex-shpak/hugo-book
   \(
 good(s, c) =
     \begin{cases}
-    if (|s| = 1 \ and \ s_1 = c)
+    if \ \ |s| = 1 \ and \ s_1 = c
     \\
-    if (char(s_1s_2...s_{n/2}) = 1 \ and \ s_1 = c \ and \ good(s_{n/2&#43;1}...s_n, c &#43; 1))
+    if \ \ char(s_1s_2...s_{n/2}) = 1 \ and \ s_1 = c \ and \ good(s_{n/2&#43;1}...s_n, c &#43; 1)
     \\
-    if (char(s_{n/2&#43;1}...s_n) = 1 \ and \ s_n = c \ and \ good(s_1s_2...s_{n/2}, c &#43; 1))
+    if \ \ char(s_{n/2&#43;1}...s_n) = 1 \ and \ s_n = c \ and \ good(s_1s_2...s_{n/2}, c &#43; 1)
     \end{cases}\)
 </span>
 
+<p>现在你可以进行任意次操作，将 <span>
+  \(s\)
+</span>
+ 中的一个字符修改成另一个字符，请问将 <span>
+  \(s\)
+</span>
+ 修改成 <span>
+  \(good(s, a)\)
+</span>
+ 串的最小操作数</p>
 <h1 id="思路">
   思路：
   <a class="anchor" href="#%e6%80%9d%e8%b7%af">#</a>
 </h1>
+<p>模拟操作，不难得出将一个 <span>
+  \(s\)
+</span>
+ 修改成 <span>
+  \(good(s, c)\)
+</span>
+ 的操作数 <span>
+  \(f(s,c)\)
+</span>
+ 为：</p>
+<span>
+  \(
+f(s,c) = min(\sum_{i = 1}^{l} &#43; f(r,c&#43;1), \ \sum_{i = 1}^{r} &#43; f(l,c&#43;1))\)
+</span>
+
+<p>只需模拟操作即可</p>
 <h1 id="代码">
   代码：
   <a class="anchor" href="#%e4%bb%a3%e7%a0%81">#</a>
 </h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"></code></pre></div></article>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">code</span>(<span style="color:#75715e">/* Copyright by Urtusea */</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> n;
+</span></span><span style="display:flex;"><span>    string s;
+</span></span><span style="display:flex;"><span>    cin <span style="color:#f92672">&gt;&gt;</span> n <span style="color:#f92672">&gt;&gt;</span> s;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 个人习惯
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;#&#39;</span> <span style="color:#f92672">+</span> s;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    function<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>(<span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">char</span>)<span style="color:#f92672">&gt;</span> dfs <span style="color:#f92672">=</span> [<span style="color:#f92672">&amp;</span>](<span style="color:#66d9ef">int</span> u, <span style="color:#66d9ef">int</span> len, <span style="color:#66d9ef">char</span> c)<span style="color:#f92672">-&gt;</span><span style="color:#66d9ef">int</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (len <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">return</span> s[u] <span style="color:#f92672">!=</span> c;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 递归左右区间
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> l <span style="color:#f92672">=</span> dfs(u,           len <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>, c <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> r <span style="color:#f92672">=</span> dfs(u <span style="color:#f92672">+</span> len <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>, len <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>, c <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 统计剩余部分是否全为 c
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> cntL <span style="color:#f92672">=</span> len <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> count(s.begin() <span style="color:#f92672">+</span> u, s.begin() <span style="color:#f92672">+</span> u <span style="color:#f92672">+</span> len <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>, c);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> cntR <span style="color:#f92672">=</span> len <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> count(s.begin() <span style="color:#f92672">+</span> u <span style="color:#f92672">+</span> len <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>, s.begin() <span style="color:#f92672">+</span> u <span style="color:#f92672">+</span> len, c);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> min(l <span style="color:#f92672">+</span> cntR, r <span style="color:#f92672">+</span> cntL);
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cout <span style="color:#f92672">&lt;&lt;</span> dfs(<span style="color:#ae81ff">1</span>, n, <span style="color:#e6db74">&#39;a&#39;</span>) <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#39;\n&#39;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc, <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>argv[], <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>envp[])
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    cin.tie(<span style="color:#66d9ef">nullptr</span>)<span style="color:#f92672">-&gt;</span>sync_with_stdio(false);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#ifdef Urtusea
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    freopen(<span style="color:#e6db74">&#34;main.in&#34;</span>,  <span style="color:#e6db74">&#34;r&#34;</span>, stdin );
+</span></span><span style="display:flex;"><span>    freopen(<span style="color:#e6db74">&#34;main.out&#34;</span>, <span style="color:#e6db74">&#34;w&#34;</span>, stdout);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#endif
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, n <span style="color:#f92672">=</span> (cin <span style="color:#f92672">&gt;&gt;</span> n, n); i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        code();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></article>
  
       
 

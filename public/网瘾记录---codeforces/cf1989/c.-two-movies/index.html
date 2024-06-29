@@ -3,23 +3,27 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" 前言： # 题意： # 思路： # 代码： # ">
+<meta name="description" content=" 前言： # Links: C. Two Movies Codeforces: \(1400\) Clist: \(1309\) Tags: 贪心，模拟 时间复杂度: \(O(1)\) 题意： # 给你两个长度为 \(n\) 的序列 \(a, b\) ，其中只包含 \(0, 1, -1\) ，你可以规划一个长度为 \(n\) 的 \(01\) 序列 \(s\) ，使得：
+\(X = \sum_{i = 1}^{n} [s_i = 0]·a_i\\Y = \sum_{i = 1}^{n} [s_i = 1]·b_i\) 问你 \(min(X, Y)\) 的最大值
+思路： # 代码： # ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/f/">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/c.-two-movies/">
   <meta property="og:site_name" content="Urtusea CP-Algorithm">
-  <meta property="og:title" content="D">
-  <meta property="og:description" content=" 前言： # 题意： # 思路： # 代码： # ">
+  <meta property="og:title" content="C. Two Movies">
+  <meta property="og:description" content=" 前言： # Links: C. Two Movies Codeforces: \(1400\) Clist: \(1309\) Tags: 贪心，模拟 时间复杂度: \(O(1)\) 题意： # 给你两个长度为 \(n\) 的序列 \(a, b\) ，其中只包含 \(0, 1, -1\) ，你可以规划一个长度为 \(n\) 的 \(01\) 序列 \(s\) ，使得：
+\(X = \sum_{i = 1}^{n} [s_i = 0]·a_i\\Y = \sum_{i = 1}^{n} [s_i = 1]·b_i\) 问你 \(min(X, Y)\) 的最大值
+思路： # 代码： # ">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="网瘾记录---codeforces">
-<title>D | Urtusea CP-Algorithm</title>
+<title>C. Two Movies | Urtusea CP-Algorithm</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" >
-<link rel="canonical" href="http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/f/">
+<link rel="canonical" href="http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/c.-two-movies/">
 <link rel="stylesheet" href="/book.min.484e3cdc2f6e660df5c808d0eaf99198acde922db9728bc590485956e896548a.css" integrity="sha256-SE483C9uZg31yAjQ6vmRmKzeki25covFkEhZVuiWVIo=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/zh.search.min.f4dd9151e40292005f3f642d2e516e53e1fe7293d8f13a44984c7a496d190a98.js" integrity="sha256-9N2RUeQCkgBfP2QtLlFuU&#43;H&#43;cpPY8TpEmEx6SW0ZCpg=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.51d640dffc030bbac1566aa460aae29de01ff164133fe6727cffa2edbba754d8.js" integrity="sha256-UdZA3/wDC7rBVmqkYKrineAf8WQTP&#43;ZyfP&#43;i7bunVNg=" crossorigin="anonymous"></script>
 
   
 
@@ -245,46 +249,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/c/" class="">C</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/f/" class="active">D</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/e/" class="">E</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/d/" class="">F</a>
+    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/c.-two-movies/" class="active">C. Two Movies</a>
   
 
         </li>
@@ -378,7 +343,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>D</strong>
+  <strong>C. Two Movies</strong>
 
   <label for="toc-control">
     
@@ -407,10 +372,59 @@ https://github.com/alex-shpak/hugo-book
   前言：
   <a class="anchor" href="#%e5%89%8d%e8%a8%80">#</a>
 </h1>
+<ul>
+<li>Links: <a href="https://codeforces.com/contest/1989/problem/C">C. Two Movies</a></li>
+<li>Codeforces: 
+<link rel="stylesheet" href="/katex/katex.min.css" />
+<script defer src="/katex/katex.min.js"></script>
+<script defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script><span>
+  \(1400\)
+</span>
+</li>
+<li>Clist: <span>
+  \(1309\)
+</span>
+</li>
+<li>Tags: 贪心，模拟</li>
+<li>时间复杂度: <span>
+  \(O(1)\)
+</span>
+</li>
+</ul>
 <h1 id="题意">
   题意：
   <a class="anchor" href="#%e9%a2%98%e6%84%8f">#</a>
 </h1>
+<p>给你两个长度为 <span>
+  \(n\)
+</span>
+ 的序列 <span>
+  \(a, b\)
+</span>
+，其中只包含 <span>
+  \(0, 1, -1\)
+</span>
+，你可以规划一个长度为 <span>
+  \(n\)
+</span>
+ 的 <span>
+  \(01\)
+</span>
+ 序列 <span>
+  \(s\)
+</span>
+，使得：</p>
+<span>
+  \(
+X = \sum_{i = 1}^{n} [s_i = 0]·a_i
+\\
+Y = \sum_{i = 1}^{n} [s_i = 1]·b_i\)
+</span>
+
+<p>问你 <span>
+  \(min(X, Y)\)
+</span>
+ 的最大值</p>
 <h1 id="思路">
   思路：
   <a class="anchor" href="#%e6%80%9d%e8%b7%af">#</a>
@@ -419,7 +433,7 @@ https://github.com/alex-shpak/hugo-book
   代码：
   <a class="anchor" href="#%e4%bb%a3%e7%a0%81">#</a>
 </h1>
-</article>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"></code></pre></div></article>
  
       
 
