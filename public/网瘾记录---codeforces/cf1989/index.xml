@@ -26,7 +26,14 @@
       <link>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/c.-two-movies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/c.-two-movies/</guid>
-      <description> 前言： # Links: C. Two Movies Codeforces: \(1400\) Clist: \(1309\) Tags: 贪心，模拟 时间复杂度: \(O(1)\) 题意： # 给你两个长度为 \(n\) 的序列 \(a, b\) ，你可以规划一个长度为 \(n\) 的 \(01\) 序列 \(s\) ，使得：&#xA;\(&#xD;X = \sum_{i = 1}^{n} [s_i = 0]·a_i&#xD;\\&#xD;Y = \sum_{i = 1}^{n} [s_i = 1]·b_i&#xD;\) 问你 \(min(X, Y)\) 的最大值&#xA;思路： # 代码： # </description>
+      <description>前言： # Links: C. Two Movies Codeforces: \(1400\) Clist: \(1309\) Tags: 贪心，模拟 时间复杂度: \(O(1)\) 题意： # 给你两个长度为 \(n\) 的序列 \(a, b\) ，其中只包含 \(0, 1, -1\) ，你可以规划一个长度为 \(n\) 的 \(01\) 序列 \(s\) ，使得：&#xA;\(&#xD;X = \sum_{i = 1}^{n} [s_i = 0]·a_i&#xD;\\&#xD;Y = \sum_{i = 1}^{n} [s_i = 1]·b_i&#xD;\) 问你 \(min(X, Y)\) 的最大值&#xA;思路： # 考虑 \((a_i, b_i)\) 的可能性，只有 \(9\) 种&#xA;对于 \((0, 0)\) 则对最终结果都没有影响 对于 \((1, 0), (1, -1), (0, 1), (-1, 1)\) 都是将 \(1\) 加到对应 \(X,Y\) 身上即可 对于 \((1, 1), (-1, -1)\) 考虑去将两数差值最小化即可 代码： # #include &amp;lt;bits/stdc++.</description>
+    </item>
+    <item>
+      <title>D. Smithing Skill</title>
+      <link>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/d.-smithing-skill/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/d.-smithing-skill/</guid>
+      <description> 前言： # Links: D. Smithing Skill Codeforces: 1900 Clist: 1914 Tags: DP，贪心 时间复杂度: \(O(N)\) # </description>
     </item>
   </channel>
 </rss>

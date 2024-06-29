@@ -3,17 +3,19 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" 前言： # Links: C. Two Movies Codeforces: \(1400\) Clist: \(1309\) Tags: 贪心，模拟 时间复杂度: \(O(1)\) 题意： # 给你两个长度为 \(n\) 的序列 \(a, b\) ，其中只包含 \(0, 1, -1\) ，你可以规划一个长度为 \(n\) 的 \(01\) 序列 \(s\) ，使得：
+<meta name="description" content="前言： # Links: C. Two Movies Codeforces: \(1400\) Clist: \(1309\) Tags: 贪心，模拟 时间复杂度: \(O(1)\) 题意： # 给你两个长度为 \(n\) 的序列 \(a, b\) ，其中只包含 \(0, 1, -1\) ，你可以规划一个长度为 \(n\) 的 \(01\) 序列 \(s\) ，使得：
 \(X = \sum_{i = 1}^{n} [s_i = 0]·a_i\\Y = \sum_{i = 1}^{n} [s_i = 1]·b_i\) 问你 \(min(X, Y)\) 的最大值
-思路： # 代码： # ">
+思路： # 考虑 \((a_i, b_i)\) 的可能性，只有 \(9\) 种
+对于 \((0, 0)\) 则对最终结果都没有影响 对于 \((1, 0), (1, -1), (0, 1), (-1, 1)\) 都是将 \(1\) 加到对应 \(X,Y\) 身上即可 对于 \((1, 1), (-1, -1)\) 考虑去将两数差值最小化即可 代码： # #include &lt;bits/stdc&#43;&#43;.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/c.-two-movies/">
   <meta property="og:site_name" content="Urtusea CP-Algorithm">
   <meta property="og:title" content="C. Two Movies">
-  <meta property="og:description" content=" 前言： # Links: C. Two Movies Codeforces: \(1400\) Clist: \(1309\) Tags: 贪心，模拟 时间复杂度: \(O(1)\) 题意： # 给你两个长度为 \(n\) 的序列 \(a, b\) ，其中只包含 \(0, 1, -1\) ，你可以规划一个长度为 \(n\) 的 \(01\) 序列 \(s\) ，使得：
+  <meta property="og:description" content="前言： # Links: C. Two Movies Codeforces: \(1400\) Clist: \(1309\) Tags: 贪心，模拟 时间复杂度: \(O(1)\) 题意： # 给你两个长度为 \(n\) 的序列 \(a, b\) ，其中只包含 \(0, 1, -1\) ，你可以规划一个长度为 \(n\) 的 \(01\) 序列 \(s\) ，使得：
 \(X = \sum_{i = 1}^{n} [s_i = 0]·a_i\\Y = \sum_{i = 1}^{n} [s_i = 1]·b_i\) 问你 \(min(X, Y)\) 的最大值
-思路： # 代码： # ">
+思路： # 考虑 \((a_i, b_i)\) 的可能性，只有 \(9\) 种
+对于 \((0, 0)\) 则对最终结果都没有影响 对于 \((1, 0), (1, -1), (0, 1), (-1, 1)\) 都是将 \(1\) 加到对应 \(X,Y\) 身上即可 对于 \((1, 1), (-1, -1)\) 考虑去将两数差值最小化即可 代码： # #include &lt;bits/stdc&#43;&#43;.">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="网瘾记录---codeforces">
@@ -23,7 +25,7 @@
 <link rel="canonical" href="http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/c.-two-movies/">
 <link rel="stylesheet" href="/book.min.484e3cdc2f6e660df5c808d0eaf99198acde922db9728bc590485956e896548a.css" integrity="sha256-SE483C9uZg31yAjQ6vmRmKzeki25covFkEhZVuiWVIo=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/zh.search.min.51d640dffc030bbac1566aa460aae29de01ff164133fe6727cffa2edbba754d8.js" integrity="sha256-UdZA3/wDC7rBVmqkYKrineAf8WQTP&#43;ZyfP&#43;i7bunVNg=" crossorigin="anonymous"></script>
+  <script defer src="/zh.search.min.1ac864576765bf915342f9a92daa91d30624d66e65f61b130c057be7d3f91628.js" integrity="sha256-GshkV2dlv5FTQvmpLaqR0wYk1m5l9hsTDAV759P5Fig=" crossorigin="anonymous"></script>
 
   
 
@@ -255,6 +257,19 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/d.-smithing-skill/" class="">D. Smithing Skill</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -429,11 +444,95 @@ Y = \sum_{i = 1}^{n} [s_i = 1]·b_i\)
   思路：
   <a class="anchor" href="#%e6%80%9d%e8%b7%af">#</a>
 </h1>
+<p>考虑 <span>
+  \((a_i, b_i)\)
+</span>
+ 的可能性，只有 <span>
+  \(9\)
+</span>
+ 种</p>
+<ul>
+<li>对于 <span>
+  \((0, 0)\)
+</span>
+ 则对最终结果都没有影响</li>
+<li>对于 <span>
+  \((1, 0), (1, -1), (0, 1), (-1, 1)\)
+</span>
+ 都是将 <span>
+  \(1\)
+</span>
+ 加到对应 <span>
+  \(X,Y\)
+</span>
+ 身上即可</li>
+<li>对于 <span>
+  \((1, 1), (-1, -1)\)
+</span>
+ 考虑去将两数差值最小化即可</li>
+</ul>
 <h1 id="代码">
   代码：
   <a class="anchor" href="#%e4%bb%a3%e7%a0%81">#</a>
 </h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"></code></pre></div></article>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">code</span>(<span style="color:#75715e">/* Copyright by Urtusea */</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> n;
+</span></span><span style="display:flex;"><span>    cin <span style="color:#f92672">&gt;&gt;</span> n;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> a(n <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>), b(n <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>) cin <span style="color:#f92672">&gt;&gt;</span> a[i];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>) cin <span style="color:#f92672">&gt;&gt;</span> b[i];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    vector f(<span style="color:#ae81ff">3</span>, vector(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">0</span>));
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>) f[a[i] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>][b[i] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>]<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 先将一定最优的操作加上
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> X <span style="color:#f92672">=</span> f[<span style="color:#ae81ff">2</span>][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> f[<span style="color:#ae81ff">2</span>][<span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> Y <span style="color:#f92672">=</span> f[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">2</span>] <span style="color:#f92672">+</span> f[<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">2</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 先交换，方便后续操作
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (X <span style="color:#f92672">&gt;</span> Y) swap(X, Y);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// (1, 1)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> tmp <span style="color:#f92672">=</span> min(f[<span style="color:#ae81ff">2</span>][<span style="color:#ae81ff">2</span>], Y <span style="color:#f92672">-</span> X);
+</span></span><span style="display:flex;"><span>    X       <span style="color:#f92672">+=</span> tmp;
+</span></span><span style="display:flex;"><span>    f[<span style="color:#ae81ff">2</span>][<span style="color:#ae81ff">2</span>] <span style="color:#f92672">-=</span> tmp;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    X <span style="color:#f92672">+=</span> f[<span style="color:#ae81ff">2</span>][<span style="color:#ae81ff">2</span>] <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>    Y <span style="color:#f92672">+=</span> (f[<span style="color:#ae81ff">2</span>][<span style="color:#ae81ff">2</span>] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// (-1, -1)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    tmp <span style="color:#f92672">=</span> min(f[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>], Y <span style="color:#f92672">-</span> X);
+</span></span><span style="display:flex;"><span>    Y       <span style="color:#f92672">-=</span> tmp;
+</span></span><span style="display:flex;"><span>    f[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">-=</span> tmp;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    X <span style="color:#f92672">-=</span> f[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>    Y <span style="color:#f92672">-=</span> (f[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cout <span style="color:#f92672">&lt;&lt;</span> min(X, Y) <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#39;\n&#39;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc, <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>argv[], <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>envp[])
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    cin.tie(<span style="color:#66d9ef">nullptr</span>)<span style="color:#f92672">-&gt;</span>sync_with_stdio(false);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#ifdef Urtusea
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    freopen(<span style="color:#e6db74">&#34;main.in&#34;</span>,  <span style="color:#e6db74">&#34;r&#34;</span>, stdin );
+</span></span><span style="display:flex;"><span>    freopen(<span style="color:#e6db74">&#34;main.out&#34;</span>, <span style="color:#e6db74">&#34;w&#34;</span>, stdout);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#endif
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, n <span style="color:#f92672">=</span> (cin <span style="color:#f92672">&gt;&gt;</span> n, n); i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        code();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></article>
  
       
 

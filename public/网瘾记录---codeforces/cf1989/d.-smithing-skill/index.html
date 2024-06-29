@@ -3,22 +3,24 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="前言： # Links: B. Substring and Subsequence Codeforces: \(1200\) Clist: \(1142\) Tags: 最长递增子序列，双指针 时间复杂度: \(O(|a|·|b|)\) 题意： # 对于一个字符串 \(s\) ，给你其一子串 \(a\) 和一子序列 \(b\) ，询问你满足条件的 \(|s|\) 的最小值
-思路： # 考虑 DP，令 \(f(i)\) 为 以 \(b_i\) 开头，与 \(a\) 匹配的最长公共子序列，不难得到答案为： \(|s| = a &#43; b - min(f(i))\) 代码： # #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; void code(/* Copyright by Urtusea */) { string a, b; cin &gt;&gt; a &gt;&gt; b; int n = a.">
+<meta name="description" content="前言： # Links: D. Smithing Skill Codeforces: \(1900\) Clist: \(1914\) Tags: DP，贪心 时间复杂度: \(O(N)\) 题意： # 给你两个大小为 \(n\) 的序列 \(a, b\) ，和一个大小为 \(m\) 的序列 \(c\) ，对于每一个 \(c_i\) 你都可以花费 \(a_j\) 并获得 \(b_j\) 的返还，最终获得 \(2\) 点贡献，可以进行多次这样的操作，直到无法进行为止，问你最大能获得的贡献为多少
+思路： # 对于每个相同的 \(a_i, a_j\) 只需要考虑对应的 \(max(b_i, b_j)\) 即可，很简单的贪心，然后会发现，小范围以内的数我们可以直接通过 DP 将答案递推出来，而超过这个范围的我们也只需要贪心的降到小范围里面加上其值即可
+代码： # #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; void code(/* Copyright by Urtusea */) { int n, m; cin &gt;&gt; n &gt;&gt; m; vector&lt;int&gt; a(n &#43; 1), b(n &#43; 1), c(m &#43; 1); for (int i = 1; i &lt;= n; i&#43;&#43;) cin &gt;&gt; a[i]; for (int i = 1; i &lt;= n; i&#43;&#43;) cin &gt;&gt; b[i]; for (int i = 1; i &lt;= m; i&#43;&#43;) cin &gt;&gt; c[i]; const int N = 1000000, INF = 1000000000; // 预处理 vector&lt;int&gt; p(N &#43; 1, INF), f(N &#43; 1), g(N &#43; 1); for (int i = 1; i &lt;= n; i&#43;&#43;) p[a[i]] = min(p[a[i]], a[i] - b[i]); iota(f.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/b.-substring-and-subsequence/">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/d.-smithing-skill/">
   <meta property="og:site_name" content="Urtusea CP-Algorithm">
-  <meta property="og:title" content="B. Substring and Subsequence">
-  <meta property="og:description" content="前言： # Links: B. Substring and Subsequence Codeforces: \(1200\) Clist: \(1142\) Tags: 最长递增子序列，双指针 时间复杂度: \(O(|a|·|b|)\) 题意： # 对于一个字符串 \(s\) ，给你其一子串 \(a\) 和一子序列 \(b\) ，询问你满足条件的 \(|s|\) 的最小值
-思路： # 考虑 DP，令 \(f(i)\) 为 以 \(b_i\) 开头，与 \(a\) 匹配的最长公共子序列，不难得到答案为： \(|s| = a &#43; b - min(f(i))\) 代码： # #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; void code(/* Copyright by Urtusea */) { string a, b; cin &gt;&gt; a &gt;&gt; b; int n = a.">
+  <meta property="og:title" content="D. Smithing Skill">
+  <meta property="og:description" content="前言： # Links: D. Smithing Skill Codeforces: \(1900\) Clist: \(1914\) Tags: DP，贪心 时间复杂度: \(O(N)\) 题意： # 给你两个大小为 \(n\) 的序列 \(a, b\) ，和一个大小为 \(m\) 的序列 \(c\) ，对于每一个 \(c_i\) 你都可以花费 \(a_j\) 并获得 \(b_j\) 的返还，最终获得 \(2\) 点贡献，可以进行多次这样的操作，直到无法进行为止，问你最大能获得的贡献为多少
+思路： # 对于每个相同的 \(a_i, a_j\) 只需要考虑对应的 \(max(b_i, b_j)\) 即可，很简单的贪心，然后会发现，小范围以内的数我们可以直接通过 DP 将答案递推出来，而超过这个范围的我们也只需要贪心的降到小范围里面加上其值即可
+代码： # #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; void code(/* Copyright by Urtusea */) { int n, m; cin &gt;&gt; n &gt;&gt; m; vector&lt;int&gt; a(n &#43; 1), b(n &#43; 1), c(m &#43; 1); for (int i = 1; i &lt;= n; i&#43;&#43;) cin &gt;&gt; a[i]; for (int i = 1; i &lt;= n; i&#43;&#43;) cin &gt;&gt; b[i]; for (int i = 1; i &lt;= m; i&#43;&#43;) cin &gt;&gt; c[i]; const int N = 1000000, INF = 1000000000; // 预处理 vector&lt;int&gt; p(N &#43; 1, INF), f(N &#43; 1), g(N &#43; 1); for (int i = 1; i &lt;= n; i&#43;&#43;) p[a[i]] = min(p[a[i]], a[i] - b[i]); iota(f.">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="网瘾记录---codeforces">
-<title>B. Substring and Subsequence | Urtusea CP-Algorithm</title>
+<title>D. Smithing Skill | Urtusea CP-Algorithm</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" >
-<link rel="canonical" href="http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/b.-substring-and-subsequence/">
+<link rel="canonical" href="http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/d.-smithing-skill/">
 <link rel="stylesheet" href="/book.min.484e3cdc2f6e660df5c808d0eaf99198acde922db9728bc590485956e896548a.css" integrity="sha256-SE483C9uZg31yAjQ6vmRmKzeki25covFkEhZVuiWVIo=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
   <script defer src="/zh.search.min.1ac864576765bf915342f9a92daa91d30624d66e65f61b130c057be7d3f91628.js" integrity="sha256-GshkV2dlv5FTQvmpLaqR0wYk1m5l9hsTDAV759P5Fig=" crossorigin="anonymous"></script>
@@ -234,7 +236,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/b.-substring-and-subsequence/" class="active">B. Substring and Subsequence</a>
+    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/b.-substring-and-subsequence/" class="">B. Substring and Subsequence</a>
   
 
         </li>
@@ -260,7 +262,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/d.-smithing-skill/" class="">D. Smithing Skill</a>
+    <a href="/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/d.-smithing-skill/" class="active">D. Smithing Skill</a>
   
 
         </li>
@@ -354,7 +356,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>B. Substring and Subsequence</strong>
+  <strong>D. Smithing Skill</strong>
 
   <label for="toc-control">
     
@@ -384,21 +386,21 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#%e5%89%8d%e8%a8%80">#</a>
 </h1>
 <ul>
-<li>Links: <a href="https://codeforces.com/contest/1989/problem/B">B. Substring and Subsequence</a></li>
+<li>Links: <a href="https://codeforces.com/contest/1989/problem/D">D. Smithing Skill</a></li>
 <li>Codeforces: 
 <link rel="stylesheet" href="/katex/katex.min.css" />
 <script defer src="/katex/katex.min.js"></script>
 <script defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script><span>
-  \(1200\)
+  \(1900\)
 </span>
 </li>
 <li>Clist: <span>
-  \(1142\)
+  \(1914\)
 </span>
 </li>
-<li>Tags: 最长递增子序列，双指针</li>
+<li>Tags: DP，贪心</li>
 <li>时间复杂度: <span>
-  \(O(|a|·|b|)\)
+  \(O(N)\)
 </span>
 </li>
 </ul>
@@ -406,36 +408,42 @@ https://github.com/alex-shpak/hugo-book
   题意：
   <a class="anchor" href="#%e9%a2%98%e6%84%8f">#</a>
 </h1>
-<p>对于一个字符串 <span>
-  \(s\)
+<p>给你两个大小为 <span>
+  \(n\)
 </span>
-，给你其一子串 <span>
-  \(a\)
+ 的序列 <span>
+  \(a, b\)
 </span>
- 和一子序列 <span>
-  \(b\)
+，和一个大小为 <span>
+  \(m\)
 </span>
-，询问你满足条件的 <span>
-  \(|s|\)
+ 的序列 <span>
+  \(c\)
 </span>
- 的最小值</p>
+，对于每一个 <span>
+  \(c_i\)
+</span>
+ 你都可以花费 <span>
+  \(a_j\)
+</span>
+ 并获得 <span>
+  \(b_j\)
+</span>
+ 的返还，最终获得 <span>
+  \(2\)
+</span>
+ 点贡献，可以进行多次这样的操作，直到无法进行为止，问你最大能获得的贡献为多少</p>
 <h1 id="思路">
   思路：
   <a class="anchor" href="#%e6%80%9d%e8%b7%af">#</a>
 </h1>
-<p>考虑 DP，令 <span>
-  \(f(i)\)
+<p>对于每个相同的 <span>
+  \(a_i, a_j\)
 </span>
- 为 以 <span>
-  \(b_i\)
+ 只需要考虑对应的 <span>
+  \(max(b_i, b_j)\)
 </span>
- 开头，与 <span>
-  \(a\)
-</span>
- 匹配的最长公共子序列，不难得到答案为：<span>
-  \(|s| = a &#43; b - min(f(i))\)
-</span>
-</p>
+ 即可，很简单的贪心，然后会发现，小范围以内的数我们可以直接通过 DP 将答案递推出来，而超过这个范围的我们也只需要贪心的降到小范围里面加上其值即可</p>
 <h1 id="代码">
   代码：
   <a class="anchor" href="#%e4%bb%a3%e7%a0%81">#</a>
@@ -445,24 +453,46 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">code</span>(<span style="color:#75715e">/* Copyright by Urtusea */</span>)
 </span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    string a, b;
-</span></span><span style="display:flex;"><span>    cin <span style="color:#f92672">&gt;&gt;</span> a <span style="color:#f92672">&gt;&gt;</span> b;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> n, m;
+</span></span><span style="display:flex;"><span>    cin <span style="color:#f92672">&gt;&gt;</span> n <span style="color:#f92672">&gt;&gt;</span> m;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> a.size(), m <span style="color:#f92672">=</span> b.size();
+</span></span><span style="display:flex;"><span>    vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> a(n <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>), b(n <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>), c(m <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>) cin <span style="color:#f92672">&gt;&gt;</span> a[i];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>) cin <span style="color:#f92672">&gt;&gt;</span> b[i];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> m; i<span style="color:#f92672">++</span>) cin <span style="color:#f92672">&gt;&gt;</span> c[i];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> N <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000000</span>, INF <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000000000</span>;
 </span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 将字符串变为 &#34;#a&#34;，使得其下标从 1 开始，个人习惯罢了
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;#&#39;</span> <span style="color:#f92672">+</span> a;
-</span></span><span style="display:flex;"><span>    b <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;#&#39;</span> <span style="color:#f92672">+</span> b;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 预处理
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> p(N <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, INF), f(N <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>), g(N <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>) p[a[i]] <span style="color:#f92672">=</span> min(p[a[i]], a[i] <span style="color:#f92672">-</span> b[i]);
+</span></span><span style="display:flex;"><span>    iota(f.begin(), f.end(), <span style="color:#ae81ff">0</span>);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    vector f(m <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0LL</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> m; i<span style="color:#f92672">++</span>)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; j <span style="color:#f92672">&lt;=</span> n; j<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// DP 预处理 [1, 1e6] 的答案
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> N; i<span style="color:#f92672">++</span>)
 </span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (f[i] <span style="color:#f92672">+</span> i <span style="color:#f92672">&gt;</span> m) <span style="color:#66d9ef">break</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (a[j] <span style="color:#f92672">==</span> b[f[i] <span style="color:#f92672">+</span> i]) f[i]<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (p[f[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>]] <span style="color:#f92672">&lt;=</span> p[f[i]]) f[i] <span style="color:#f92672">=</span> f[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (p[f[i]] <span style="color:#f92672">==</span> INF) <span style="color:#66d9ef">continue</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> tmp <span style="color:#f92672">=</span> (i <span style="color:#f92672">-</span> f[i]) <span style="color:#f92672">/</span> p[f[i]] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        g[i] <span style="color:#f92672">=</span> tmp <span style="color:#f92672">+</span> g[i <span style="color:#f92672">-</span> tmp <span style="color:#f92672">*</span> p[f[i]]];
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    cout <span style="color:#f92672">&lt;&lt;</span> n <span style="color:#f92672">+</span> m <span style="color:#f92672">-</span> <span style="color:#f92672">*</span>max_element(f.begin(), f.end()) <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#39;\n&#39;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 贪心求解
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> ans <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> m; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> mId <span style="color:#f92672">=</span> min(c[i], N);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (p[f[mId]] <span style="color:#f92672">==</span> INF) <span style="color:#66d9ef">continue</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> tmp <span style="color:#f92672">=</span> (c[i] <span style="color:#f92672">-</span> f[mId]) <span style="color:#f92672">/</span> p[f[mId]] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        ans <span style="color:#f92672">+=</span> tmp <span style="color:#f92672">+</span> g[c[i] <span style="color:#f92672">-</span> tmp <span style="color:#f92672">*</span> p[f[mId]]];
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cout <span style="color:#f92672">&lt;&lt;</span> ans <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#39;\n&#39;</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc, <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>argv[], <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>envp[])
@@ -474,8 +504,8 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>    freopen(<span style="color:#e6db74">&#34;main.out&#34;</span>, <span style="color:#e6db74">&#34;w&#34;</span>, stdout);
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#endif
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, n <span style="color:#f92672">=</span> (cin <span style="color:#f92672">&gt;&gt;</span> n, n); i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>)
-</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// for (int i = 1, n = (cin &gt;&gt; n, n); i &lt;= n; i++)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    {
 </span></span><span style="display:flex;"><span>        code();
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
