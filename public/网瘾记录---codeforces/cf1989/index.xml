@@ -33,7 +33,7 @@
       <link>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/d.-smithing-skill/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/%E7%BD%91%E7%98%BE%E8%AE%B0%E5%BD%95---codeforces/cf1989/d.-smithing-skill/</guid>
-      <description> 前言： # Links: D. Smithing Skill Codeforces: 1900 Clist: 1914 Tags: DP，贪心 时间复杂度: \(O(N)\) # </description>
+      <description>前言： # Links: D. Smithing Skill Codeforces: \(1900\) Clist: \(1914\) Tags: DP，贪心 时间复杂度: \(O(N)\) 题意： # 给你两个大小为 \(n\) 的序列 \(a, b\) ，和一个大小为 \(m\) 的序列 \(c\) ，对于每一个 \(c_i\) 你都可以花费 \(a_j\) 并获得 \(b_j\) 的返还，最终获得 \(2\) 点贡献，可以进行多次这样的操作，直到无法进行为止，问你最大能获得的贡献为多少&#xA;思路： # 对于每个相同的 \(a_i, a_j\) 只需要考虑对应的 \(max(b_i, b_j)\) 即可，很简单的贪心，然后会发现，小范围以内的数我们可以直接通过 DP 将答案递推出来，而超过这个范围的我们也只需要贪心的降到小范围里面加上其值即可&#xA;代码： # #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; void code(/* Copyright by Urtusea */) { int n, m; cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m; vector&amp;lt;int&amp;gt; a(n + 1), b(n + 1), c(m + 1); for (int i = 1; i &amp;lt;= n; i++) cin &amp;gt;&amp;gt; a[i]; for (int i = 1; i &amp;lt;= n; i++) cin &amp;gt;&amp;gt; b[i]; for (int i = 1; i &amp;lt;= m; i++) cin &amp;gt;&amp;gt; c[i]; const int N = 1000000, INF = 1000000000; // 预处理 vector&amp;lt;int&amp;gt; p(N + 1, INF), f(N + 1), g(N + 1); for (int i = 1; i &amp;lt;= n; i++) p[a[i]] = min(p[a[i]], a[i] - b[i]); iota(f.</description>
     </item>
   </channel>
 </rss>
