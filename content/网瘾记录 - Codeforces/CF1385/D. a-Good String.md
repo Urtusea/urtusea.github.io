@@ -8,7 +8,7 @@ title: "D. a-Good String"
 - Codeforces: {{<katex>}}1500{{</katex>}}
 - Clist: {{<katex>}}1527{{</katex>}}
 - Tags: 分治，模拟，DFS
-- 时间复杂度: {{<katex>}}nlogn{{</katex>}}
+- 时间复杂度: {{<katex>}}O(nlogn){{</katex>}}
 
 # 题意：
 
