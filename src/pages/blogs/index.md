@@ -104,3 +104,130 @@ std::array<T, 10> b;
 
 <p></p>
 
+## 对齐格式
+
+对于声明变量，类型与类型名开头对齐，变量名与变量名开头对齐
+
+<p></p>
+
+``` cpp
+// 声明变量
+type        variable_name;
+long_type   variable_name;
+short_type  variable_name;
+```
+
+<p></p>
+
+对于 `if / else if / else`，语句与语句互相对齐，仅允许 `if () break;`，`if () continue;` 存在
+
+<p></p>
+
+``` cpp
+if (expression) {
+
+}
+else if (expression) {
+
+}
+else {
+
+}
+
+if (expression)
+    variable += 1;
+else if (expression)
+    variable += 1;
+else {
+
+}
+
+if (expression) continue;
+if (expression) break;
+```
+
+<p></p>
+
+对于传递的参数，一行以内最多容纳四个参数，对于同一列的参数，开头均需对齐
+
+<p></p>
+
+``` cpp
+type function(p_1, p_2, p_3, p_4
+              p_5, p_6, p_7, p_8,
+              p_9);
+```
+
+<p></p>
+
+## 命名格式
+
+对于变量以及函数的命名，均采用 动词_形容词_名称 的格式进行命名，如有重复的，则最多允许存在一对重复的名字，并以 `_` 来进行区分
+
+<p></p>
+
+``` cpp
+// 函数格式
+type check_min_val() {}
+type query_min() {}
+type query_max() {}
+
+// 变量格式
+type a;
+type b;
+type pref_a;
+type suff_a;
+
+// 重复格式
+type a;
+type _a;
+```
+
+<p></p>
+
+对于模板的参数类型，均以大写字母开头，如非必要，尽量采用一个大写字母概括
+
+<p></p>
+
+``` cpp
+template <typename T>
+T function() {}
+
+template <typename T, typename Func>
+T function(Func func) {}
+```
+
+<p></p>
+
+## 特殊符号格式
+
+`:: / . / ->` 必须与左右两侧紧贴
+
+<p></p>
+
+``` cpp
+std::cin.tie(nullptr)->sync_with_stdio(false);
+```
+
+<p></p>
+
+`:` 必须与左右两侧间距一个空格
+
+<p></p>
+
+``` cpp
+for (auto x : a)
+    std::cout << x << '\n';
+```
+
+<p></p>
+
+`& / && / *` 必须与右侧紧贴
+
+<p></p>
+
+``` cpp
+auto function(auto &val1, auto &&val2, auto *val3) {}
+```
+
+<p></p>
