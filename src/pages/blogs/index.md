@@ -231,3 +231,32 @@ auto function(auto &val1, auto &&val2, auto *val3) {}
 ```
 
 <p></p>
+
+## 代码块格式
+
+对于变量声明以及变量初始化，需紧贴其后或者另起一行初始化
+
+<p></p>
+
+``` cpp
+// 声明变量
+type variable = init_val;
+
+type variable;
+variable = init_val;
+```
+
+<p></p>
+
+对于声明变量，一行以内最多容纳四个变量
+
+<p></p>
+
+``` cpp
+type variable1, variable2, variable3, variable4;
+type variable5;
+```
+
+<p></p>
+
+## 注：当然，也有可能瞎写（bushi），只是起到一个给自己规范的作用

@@ -107,13 +107,13 @@ struct fenwick_tree : public std::vector<T> {
         std::vector<T>(n + 1) {}
     
     constexpr void update(int u, T x) & {
-        assert(0 > u || u >= this->size());
+        assert(1 <= u && u < (*this)->size());
         for (; u < this->size(); u += u & -u)
             (*this)[u] += x;
     }
 
     constexpr T query(int u, T x = T()) const {
-        assert(0 > u || u >= this->size());
+        assert(0 <= u && u < (*this)->size());
         for (; u; u -= u & -u)
             x += (*this)[u];
         return x;
