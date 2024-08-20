@@ -5,6 +5,160 @@ layout: '../../layouts/Templates.astro'
 
 # 数据结构
 
+## Vertical Heap - 对顶堆
+
+简易的维护 第 k 大/小 的数据结构，对于更新 k 的位置复杂度较高，所以只适用于 k 固定，或者均摊复杂度较低的情况
+
+<p></p>
+
+``` cpp
+// 第 k 小对顶堆模板
+template <typename T>
+struct min_vertical_heap {
+    using min_heap = std::priority_queue<T, std::vector<T>, std::greater<T>>;
+    using max_heap = std::priority_queue<T, std::vector<T>, std::less<T>>;
+
+    int vertical_place;
+    max_heap left_heap;
+    min_heap right_heap;
+
+    constexpr min_vertical_heap(int k = 0) :
+        vertical_place(k) {
+        assert(k >= 0);
+    }
+    
+    constexpr void push(T x) & {
+        if (!vertical_place) {
+            right_heap.emplace(x);
+            return;
+        }
+
+        if (left_heap.size() < vertical_place)
+            left_heap.emplace(x);
+        else if (x >= left_heap.top())
+            right_heap.emplace(x);
+        else {
+            T tmp = left_heap.top();
+            left_heap.pop();
+            left_heap.emplace(x);
+            right_heap.emplace(tmp);
+        }
+    }
+
+    constexpr T top() const {
+        if (!left_heap.empty())
+            return left_heap.top();
+        else if (!right_heap.empty())
+            return right_heap.top();
+        else
+            return T();
+    }
+
+    constexpr int size() const {
+        return left_heap.size() + right_heap.size();
+    }
+
+    constexpr void update_add() & {
+        if (!right_heap.empty()) {
+            left_heap.emplace(right_heap.top());
+            right_heap.pop();
+        }
+        vertical_place += 1;
+    }
+
+    constexpr void update_sub() & {
+        assert(vertical_place >= 1);
+        if (!left_heap.empty()) {
+            right_heap.emplace(left_heap.top());
+            left_heap.pop();
+        }
+        vertical_place -= 1;
+    }
+};
+
+// 第 k 大最顶堆模板
+template <typename T>
+struct max_vertical_heap {
+    using min_heap = std::priority_queue<T, std::vector<T>, std::greater<T>>;
+    using max_heap = std::priority_queue<T, std::vector<T>, std::less<T>>;
+
+    int vertical_place;
+    min_heap left_heap;
+    max_heap right_heap;
+
+    constexpr max_vertical_heap(int k = 0) :
+        vertical_place(k) {
+        assert(k >= 0);
+    }
+    
+    constexpr void push(T x) & {
+        if (!vertical_place) {
+            right_heap.emplace(x);
+            return;
+        }
+
+        if (left_heap.size() < vertical_place)
+            left_heap.emplace(x);
+        else if (x <= left_heap.top())
+            right_heap.emplace(x);
+        else {
+            T tmp = left_heap.top();
+            left_heap.pop();
+            left_heap.emplace(x);
+            right_heap.emplace(tmp);
+        }
+    }
+
+    constexpr T top() const {
+        if (!left_heap.empty())
+            return left_heap.top();
+        else if (!right_heap.empty())
+            return right_heap.top();
+        else
+            return T();
+    }
+
+    constexpr int size() const {
+        return left_heap.size() + right_heap.size();
+    }
+
+    constexpr void update_add() & {
+        if (!right_heap.empty()) {
+            left_heap.emplace(right_heap.top());
+            right_heap.pop();
+        }
+        vertical_place += 1;
+    }
+
+    constexpr void update_sub() & {
+        assert(vertical_place >= 1);
+        if (!left_heap.empty()) {
+            right_heap.emplace(left_heap.top());
+            left_heap.pop();
+        }
+        vertical_place -= 1;
+    }
+};
+
+// 使用方法
+vertical_heap heap;
+
+// 将 x 放入堆中
+heap.push(x);
+
+// 将堆中最大/最小 pop 删除
+heap.pop();
+
+// 查询第 k 大/小
+heap.top();
+
+// 更新 k 位置
+heap.update_add();
+heap.update_sub();
+```
+
+<p></p>
+
 ## Disjoint Set Union - 并查集
 
 并查集小而精巧，利用路径压缩和启发式合并可以做到 `O(α(n))` 的平均操作复杂度，通常用来维护一个集合之间的联通关系，或者使用带权并查集，维护点与点之间的关系
