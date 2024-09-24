@@ -1,0 +1,3 @@
+site_name: Urtusea CP-Algorithm Blog & Wiki
+
+mkdocs gh-deploy --force
