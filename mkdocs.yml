@@ -1,11 +1,85 @@
+# 网站信息相关
 site_name: Urtusea CP-Algorithm Blog & Wiki
+site_author: Urtusea
+site_url: https://urtusea.github.io
 
-extra_css:
-    - stylesheets/extra.css
+# Github 链接
+repo_name: 'Urtusea/urtusea.github.io'
+repo_url: 'https://github.com/Urtusea/urtusea.github.io/'
+
+# 导航栏
+nav:
+  - 首页:
+    - 简介: index.md
+  - 友链:
+    - 简介: links/index.md
+    - Welcome24ever: links/welcome24ever.md
+  - 随笔:
+    - 简介: blogs/index.md
+  - 代码模板:
+    - 简介: cp-templates/index.md
+    - 数据结构:
+      - Disjoint Set Union - 并查集: cp-templates/data_structure/disjoint_set_union.md
+      - Fenwick Tree - 树状数组: cp-templates/data_structure/fenwick_tree.md
+
+  - 算竞教程:
+    - 简介: tutorials/index.md
 
 theme:
-    language: zh
-    name: material
-    font: false
+  # 主题名字
+  name: material
+  
+  # 语言 & 字体
+  language: zh
+  font: false
+  
+  # 自定义图标
+  logo: 'images/Kizuna_Ai.svg'
+  favicon: 'images/Kizuna_Ai.svg'
 
-# mkdocs gh-deploy --force
+  # 滚动效果
+  features:
+    - navigation.tabs
+    - header.autohide
+    - content.code.copy
+  
+  # 明暗切换
+  palette:
+  - media: "(prefers-color-scheme)"
+    toggle:
+      icon: material/link
+      name: Switch to light mode
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    primary: indigo
+    accent: indigo
+    toggle:
+      icon: material/toggle-switch
+      name: Switch to dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: black
+    accent: indigo
+    toggle:
+      icon: material/toggle-switch-off
+      name: Switch to system preference
+
+# markdown 模块
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - markdown_katex
+
+# 自定义 CSS
+extra_css:
+  - stylesheets/extra.css
+  - https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css
+
+# 自定义 JS
+extra_javascript:
+  - javascripts/extra.js
+  - https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js
