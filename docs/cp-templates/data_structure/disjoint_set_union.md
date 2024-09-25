@@ -6,10 +6,9 @@
 
 操作:
 
-- `find(u)` : 查询元素 `u` 的所属集合
+- `find(u)`: 查询元素 `u` 的所属集合
     - 复杂度 : $O(1)$
-
-- `merge(u, v)` : 将元素 `u`, `v` 的所属集合合并
+- `merge(u, v)`: 将元素 `u`, `v` 的所属集合合并
     - 复杂度 : $O(1)$
 
 ## 代码
@@ -17,7 +16,8 @@
 ``` cpp
 struct disjoint_set_union {
 public:
-    disjoint_set_union(int n) : f(n + 1), g(n + 1) {
+    disjoint_set_union(int n)
+    : f(n + 1), g(n + 1) {
         for (int i = 1; i <= n; ++i) f[i] = i, g[i] = 1;
     }
     auto find(int x) -> int {

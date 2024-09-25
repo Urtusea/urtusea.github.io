@@ -11,19 +11,39 @@ repo_url: 'https://github.com/Urtusea/urtusea.github.io/'
 nav:
   - 首页:
     - 简介: index.md
+  
   - 友链:
     - 简介: links/index.md
     - Welcome24ever: links/welcome24ever.md
+    - fanhuaxingyu: links/fanhuaxingyu.md
+  
   - 随笔:
     - 简介: blogs/index.md
+
   - 代码模板:
     - 简介: cp-templates/index.md
+    - 数学:
+      - Mod Int - 模数类: cp-templates/math/mod_int.md
+      - Quick Power - 快速幂: cp-templates/math/quick_power.md
     - 数据结构:
       - Disjoint Set Union - 并查集: cp-templates/data_structure/disjoint_set_union.md
+      - Sparse Table - ST表: cp-templates/data_structure/sparse_table.md
       - Fenwick Tree - 树状数组: cp-templates/data_structure/fenwick_tree.md
+      - Segment Tree - 线段树: cp-templates/data_structure/segment_tree.md
+    - 字符串:
+      - String Hash - 字符串哈希: cp-templates/string/string_hash.md
+
+  - 训练日常:
+    - 简介: cp-training/index.md
+    - Luogu:
+      - P5490: cp-training/luogu/P5490.md
+      - P4588: cp-training/luogu/P4588.md
 
   - 算竞教程:
     - 简介: tutorials/index.md
+  
+  - 知识详解:
+    - 简介: cp-algorithm/index.md
 
 theme:
   # 主题名字

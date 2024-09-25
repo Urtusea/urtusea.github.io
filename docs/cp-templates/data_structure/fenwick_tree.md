@@ -8,11 +8,12 @@
 
 操作:
 
-- `update(u, x)` : 将原序列的 `u` 位置依据 `x` 去更新
-    - 复杂度 : $O(logn)$
-
-- `query(u, x)` : 以 `x` 为初始值查询原序列 $[1, u]$ 的前缀信息
-    - 复杂度 : $O(logn)$
+- `update(u, x)`: 将原序列的 `u` 位置依据 `x` 去更新
+    - 复杂度: $O(logn)$
+- `query(u, x)`: 以 `x` 为初始值查询原序列 $[1, u]$ 的前缀信息
+    - 复杂度: $O(logn)$
+- `find_first(x)`: 查询前缀信息 `<= x` 的最左位置
+    - 复杂度: $O(logn)$
 
 ## 代码
 
@@ -20,8 +21,10 @@
 template <typename T> struct fenwick_tree {
 public:
     #define lowbit(x) (x & -x)
-    fenwick_tree(int _n) : n(_n), f(_n + 1) {}
-    fenwick_tree(std::vector<T> Init) : fenwick_tree(Init.size() - 1) {
+    fenwick_tree(int _n)
+    : n(_n), f(_n + 1) {}
+    fenwick_tree(std::vector<T> Init)
+    : fenwick_tree(Init.size() - 1) {
         for (int i = 1; i <= n; i++) {
             f[i] += Init[i];
             if (i + lowbit(i) <= n) {
