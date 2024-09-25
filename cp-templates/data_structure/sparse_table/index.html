@@ -1032,6 +1032,17 @@
 
 <h1 id="sparse-table">Sparse Table</h1>
 <h2 id="_1">介绍</h2>
+<p>ST表是一种离线的维护区间信息的数据结构，该信息需要满足结合律</p>
+<ul>
+<li>结合律: 设 $L$ 为左半部分信息，$R$ 为右半部分信息，那么需要满足 $L \ opt \ R = R \ opt \ L$</li>
+</ul>
+<p>操作: </p>
+<ul>
+<li><code>query(l, r)</code>: 查询 $[l, r]$ 的信息<ul>
+<li>复杂度: $O(1)$</li>
+</ul>
+</li>
+</ul>
 <h2 id="_2">代码</h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
