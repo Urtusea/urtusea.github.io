@@ -1964,7 +1964,16 @@
 <h1 id="j-teleportation">J. Teleportation</h1>
 <h2 id="tag">Tag: 图论，分层图</h2>
 <h2 id="_1">题意</h2>
+<p>你初始点在 $0$，需要到达 $x$，对于每秒你均可以进行以下两种操作之一:</p>
+<ul>
+<li>到达 $(i + a_i) \ mod \ n$ 处</li>
+<li>$a_i = a_i + 1$</li>
+</ul>
+<p>问到达 $x$ 最少需要几秒</p>
 <h2 id="_2">思路</h2>
+<p>考虑建图，一种是已经使用过一次传送的 $i + n$，一种是暂未使用传送的 $i$</p>
+<p>只需要将 $(i, n + (i + a_i) \ mod \n)，(n + i, n + (i + 1) \ mod \ n)，(n + i, i)$ 进行连边即可</p>
+<p>跑 $01$ $BFS$ 即可</p>
 <h2 id="_3">代码</h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
