@@ -10,28 +10,28 @@
         <meta name="author" content="Urtusea">
       
       
-        <link rel="canonical" href="https://urtusea.github.io/cp-templates/data_structure/disjoint_set_union/">
+        <link rel="canonical" href="https://urtusea.github.io/cp-training/icpc/2023_%E6%BE%B3%E9%97%A8/J/">
       
       
-        <link rel="prev" href="../../math/quick_power/">
+        <link rel="prev" href="../I/">
       
       
-        <link rel="next" href="../sparse_table/">
+        <link rel="next" href="../../../../tutorials/">
       
       
-      <link rel="icon" href="../../../images/Kizuna_Ai.svg">
+      <link rel="icon" href="../../../../images/Kizuna_Ai.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.36">
     
     
       
-        <title>Disjoint Set Union - 并查集 - Urtusea CP-Algorithm Blog & Wiki</title>
+        <title>J - Urtusea CP-Algorithm Blog & Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.06209087.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.06209087.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,7 +52,7 @@
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -77,11 +77,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#disjoint-set-union" class="md-skip">
-          跳转至
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -92,9 +87,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../.." title="Urtusea CP-Algorithm Blog &amp; Wiki" class="md-header__button md-logo" aria-label="Urtusea CP-Algorithm Blog & Wiki" data-md-component="logo">
+    <a href="../../../.." title="Urtusea CP-Algorithm Blog &amp; Wiki" class="md-header__button md-logo" aria-label="Urtusea CP-Algorithm Blog & Wiki" data-md-component="logo">
       
-  <img src="../../../images/Kizuna_Ai.svg" alt="logo">
+  <img src="../../../../images/Kizuna_Ai.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Disjoint Set Union - 并查集
+              J
             
           </span>
         </div>
@@ -230,7 +225,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../.." class="md-tabs__link">
+        <a href="../../../.." class="md-tabs__link">
           
   
   首页
@@ -248,7 +243,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../links/" class="md-tabs__link">
+        <a href="../../../../links/" class="md-tabs__link">
           
   
   友链
@@ -266,10 +261,28 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../blogs/" class="md-tabs__link">
+        <a href="../../../../blogs/" class="md-tabs__link">
           
   
   随笔
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../cp-templates/" class="md-tabs__link">
+          
+  
+  代码模板
 
         </a>
       </li>
@@ -286,25 +299,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../" class="md-tabs__link">
-          
-  
-  代码模板
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../cp-training/" class="md-tabs__link">
+        <a href="../../../" class="md-tabs__link">
           
   
   训练日常
@@ -322,7 +317,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../tutorials/" class="md-tabs__link">
+        <a href="../../../../tutorials/" class="md-tabs__link">
           
   
   算竞教程
@@ -340,7 +335,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../cp-algorithm/" class="md-tabs__link">
+        <a href="../../../../cp-algorithm/" class="md-tabs__link">
           
   
   知识详解
@@ -373,9 +368,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Urtusea CP-Algorithm Blog &amp; Wiki" class="md-nav__button md-logo" aria-label="Urtusea CP-Algorithm Blog & Wiki" data-md-component="logo">
+    <a href="../../../.." title="Urtusea CP-Algorithm Blog &amp; Wiki" class="md-nav__button md-logo" aria-label="Urtusea CP-Algorithm Blog & Wiki" data-md-component="logo">
       
-  <img src="../../../images/Kizuna_Ai.svg" alt="logo">
+  <img src="../../../../images/Kizuna_Ai.svg" alt="logo">
 
     </a>
     Urtusea CP-Algorithm Blog & Wiki
@@ -440,7 +435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -506,7 +501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../links/" class="md-nav__link">
+      <a href="../../../../links/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -527,7 +522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../links/welcome24ever/" class="md-nav__link">
+      <a href="../../../../links/welcome24ever/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -548,7 +543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../links/fanhuaxingyu/" class="md-nav__link">
+      <a href="../../../../links/fanhuaxingyu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -614,7 +609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blogs/" class="md-nav__link">
+      <a href="../../../../blogs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -639,28 +634,23 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -671,7 +661,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             代码模板
@@ -685,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+      <a href="../../../../cp-templates/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -744,7 +734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../math/mod_int/" class="md-nav__link">
+      <a href="../../../../cp-templates/math/mod_int/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -765,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../math/quick_power/" class="md-nav__link">
+      <a href="../../../../cp-templates/math/quick_power/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -791,8 +781,6 @@
                 
   
   
-    
-  
   
   
     
@@ -802,11 +790,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
         
           
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
@@ -820,7 +808,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             数据结构
@@ -831,30 +819,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Disjoint Set Union - 并查集
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../cp-templates/data_structure/disjoint_set_union/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -863,44 +831,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      介绍
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      代码
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -913,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sparse_table/" class="md-nav__link">
+      <a href="../../../../cp-templates/data_structure/sparse_table/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -934,7 +864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fenwick_tree/" class="md-nav__link">
+      <a href="../../../../cp-templates/data_structure/fenwick_tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -955,7 +885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../segment_tree/" class="md-nav__link">
+      <a href="../../../../cp-templates/data_structure/segment_tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1022,7 +952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../string/string_hash/" class="md-nav__link">
+      <a href="../../../../cp-templates/string/string_hash/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1055,23 +985,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1082,7 +1017,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             训练日常
@@ -1096,7 +1031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-training/" class="md-nav__link">
+      <a href="../../../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1193,7 +1128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-training/luogu/P4588/" class="md-nav__link">
+      <a href="../../../luogu/P4588/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1260,7 +1195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-training/luogu/P5490/" class="md-nav__link">
+      <a href="../../../luogu/P5490/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1281,7 +1216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-training/luogu/P1502/" class="md-nav__link">
+      <a href="../../../luogu/P1502/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1302,7 +1237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-training/luogu/P2471/" class="md-nav__link">
+      <a href="../../../luogu/P2471/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1323,7 +1258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-training/luogu/P4513/" class="md-nav__link">
+      <a href="../../../luogu/P4513/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1390,7 +1325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-training/luogu/P2824/" class="md-nav__link">
+      <a href="../../../luogu/P2824/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1411,7 +1346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-training/luogu/P3722/" class="md-nav__link">
+      <a href="../../../luogu/P3722/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1432,7 +1367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-training/luogu/P4198/" class="md-nav__link">
+      <a href="../../../luogu/P4198/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1469,7 +1404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Codeforces" class="md-nav__link">
+      <a href="../../../../Codeforces" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1490,7 +1425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Atcoder" class="md-nav__link">
+      <a href="../../../../Atcoder" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1511,7 +1446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Nowcoder" class="md-nav__link">
+      <a href="../../../../Nowcoder" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1532,7 +1467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Other" class="md-nav__link">
+      <a href="../../../../Other" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1550,6 +1485,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1559,11 +1496,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" checked>
         
           
           <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
@@ -1577,7 +1514,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_7">
             <span class="md-nav__icon md-icon"></span>
             ICPC VP
@@ -1588,6 +1525,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1597,11 +1536,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7_1" checked>
         
           
           <label class="md-nav__link" for="__nav_5_7_1" id="__nav_5_7_1_label" tabindex="0">
@@ -1615,7 +1554,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_7_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_7_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_7_1">
             <span class="md-nav__icon md-icon"></span>
             2023 澳门站
@@ -1629,7 +1568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-training/icpc/2023_%E6%BE%B3%E9%97%A8/A/" class="md-nav__link">
+      <a href="../A/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1650,7 +1589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-training/icpc/2023_%E6%BE%B3%E9%97%A8/I/" class="md-nav__link">
+      <a href="../I/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1668,10 +1607,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../cp-training/icpc/2023_%E6%BE%B3%E9%97%A8/J/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1680,6 +1626,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1708,7 +1655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../CCPC VP" class="md-nav__link">
+      <a href="../../../../CCPC VP" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1774,7 +1721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorials/" class="md-nav__link">
+      <a href="../../../../tutorials/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1840,7 +1787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cp-algorithm/" class="md-nav__link">
+      <a href="../../../../cp-algorithm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1878,34 +1825,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      介绍
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      代码
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1923,67 +1842,9 @@
   
 
 
-<h1 id="disjoint-set-union">Disjoint Set Union</h1>
-<h2 id="_1">介绍</h2>
-<p>并查集是一种管理元素所属集合的数据结构，其用一个森林实现，一棵树维护个集合</p>
-<p>操作:</p>
-<ul>
-<li><code>find(u)</code>: 查询元素 <code>u</code> 的所属集合<ul>
-<li>复杂度 : $O(1)$</li>
-</ul>
-</li>
-<li><code>merge(u, v)</code>: 将元素 <code>u</code>, <code>v</code> 的所属集合合并<ul>
-<li>复杂度 : $O(1)$</li>
-</ul>
-</li>
-</ul>
-<h2 id="_2">代码</h2>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">disjoint_set_union</span><span class="w"> </span><span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="n">disjoint_set_union</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
-<span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">g</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">g</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">find</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">find</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">]);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">check</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">merge</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">)))</span>
-<span class="w">            </span><span class="k">return</span><span class="p">;</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">g</span><span class="p">[</span><span class="n">y</span><span class="p">])</span>
-<span class="w">            </span><span class="n">g</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">g</span><span class="p">[</span><span class="n">y</span><span class="p">],</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<span class="w">        </span><span class="k">else</span><span class="w">    </span>
-<span class="w">            </span><span class="n">g</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">g</span><span class="p">[</span><span class="n">x</span><span class="p">],</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="k">private</span><span class="o">:</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">g</span><span class="p">;</span>
-<span class="p">};</span>
-</code></pre></div></td></tr></table></div>
+  <h1>J</h1>
+
+
 
 
 
@@ -2030,12 +1891,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "header.autohide", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "header.autohide", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.56dfad97.min.js"></script>
       
-        <script src="../../../javascripts/extra.js"></script>
+        <script src="../../../../javascripts/extra.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
       
