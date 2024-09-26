@@ -1,9 +1,9 @@
 body, input {
     font-family: "MapleMono", monospace;
-    src: url(MapleMono-SC-NF-Regular.ttf);
+    src: url("../stylesheets/MapleMono-Regular.woff2") format("woff2");
 }
 
 pre, code, kbd {
     font-family: "MapleMono", monospace;
-    src: url(MapleMono-SC-NF-Regular.ttf);
+    src: url("../stylesheets/MapleMono-Regular.woff2") format("woff2");
 }
