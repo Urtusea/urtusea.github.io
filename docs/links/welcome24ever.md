@@ -1,5 +1,7 @@
 # 个人简介
 
+![图片](welcome24ever.png)
+
 东北石油大学算法皇帝，Welcome24ever 参上！
 
 # 个人链接

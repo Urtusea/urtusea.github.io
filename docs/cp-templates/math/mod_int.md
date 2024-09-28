@@ -13,6 +13,7 @@ constexpr auto quick_power(T a, uInt b, T res = T(1)) -> T {
 }
 
 template <Int P> struct mod_int {
+public:
     static Int M;
     constexpr static Int get_mod() {
         return P ? P : M;
