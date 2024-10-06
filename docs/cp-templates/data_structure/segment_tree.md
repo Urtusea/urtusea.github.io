@@ -1,24 +1,5 @@
 # Segment Tree
 
-## 介绍
-
-线段树是一种维护序列区间信息的数据结构，该信息需要满足结合律
-
-- 结合律: 设 $L$ 为左半部分信息，$R$ 为右半部分信息，那么需要满足 $L \ opt \ R = R \ opt \ L$
-
-操作:
-
-- `update(u, x)`: 将原序列的 `u` 位置依据 `x` 去更新
-    - 复杂度: $O(logn)$
-- `update(l, r, x)` : 将原序列的 $[l, r]$ 区间依据 `x` 去更新
-    - 复杂度: $O(logn)$
-- `query(l, r)`: 查询原序列 $[l, r]$ 的区间信息
-    - 复杂度: $O(logn)$
-- `find_first(l, r, check)`: 找到原序列 $[L, R]$ 的第一个 `check(true)` 的位置
-    - 复杂度: $O(logn)$
-- `find_first(l, r, check)`: 找到原序列 $[L, R]$ 最后一个 `check(true)` 的位置
-    - 复杂度: $O(logn)$
-
 ## 代码
 
 ### 单点修改

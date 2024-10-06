@@ -41,69 +41,27 @@ nav:
 
   - 训练日常:
     - 简介: cp-training/index.md
-    - Luogu:
-      - 普及-:
-        - P1010: cp-training/luogu/普及-/P1010.md
-        - P1257: cp-training/luogu/普及-/P1257.md
-        - P3612: cp-training/luogu/普及-/P3612.md
-      - 普及/提高-:
-        - P1083: cp-training/luogu/普及_提高-/P1083.md
-      - 普及+/提高:
-        - P4588: cp-training/luogu/普及+_提高/P4588.md
-      - 提高+/省选-:
-        - P5490: cp-training/luogu/提高+_省选-/P5490.md
-        - P1502: cp-training/luogu/提高+_省选-/P1502.md
-        - P2471: cp-training/luogu/提高+_省选-/P2471.md
-        - P4513: cp-training/luogu/提高+_省选-/P4513.md
-        - P1429: cp-training/luogu/提高+_省选-/P1429.md
-        - P7883: cp-training/luogu/提高+_省选-/P7883.md
-      - 省选/NOI-:
-        - P2824: cp-training/luogu/省选_NOI-/P2824.md
-        - P3722: cp-training/luogu/省选_NOI-/P3722.md
-        - P4198: cp-training/luogu/省选_NOI-/P4198.md
+    - Atcoder:
+      - ABC:
+        - 377:
+          - A: cp-training/atcoder/abc/377/A.md
+          - B: cp-training/atcoder/abc/377/B.md
+          - C: cp-training/atcoder/abc/377/C.md
+          - D: cp-training/atcoder/abc/377/D.md
+          - E: cp-training/atcoder/abc/377/E.md
+          - F: cp-training/atcoder/abc/377/F.md
+          - G: cp-training/atcoder/abc/377/G.md
     - Codeforces:
-      - DIV1:
-        - 969:
-          - A: cp-training/codeforces/DIV1/969/A.md
-          - B: cp-training/codeforces/DIV1/969/B.md
-          - C: cp-training/codeforces/DIV1/969/C.md
-          - D: cp-training/codeforces/DIV1/969/D.md
-        - 975:
-          - A: cp-training/codeforces/DIV1/975/A.md
-          - B: cp-training/codeforces/DIV1/975/B.md
-          - C: cp-training/codeforces/DIV1/975/C.md
-          - D: cp-training/codeforces/DIV1/975/D.md
-      - Edu DIV2:
-        - 1:
-          - A: cp-training/codeforces/Edu_DIV2/1/A.md
-          - B: cp-training/codeforces/Edu_DIV2/1/B.md
-          - C: cp-training/codeforces/Edu_DIV2/1/C.md
-          - D: cp-training/codeforces/Edu_DIV2/1/D.md
-          - E: cp-training/codeforces/Edu_DIV2/1/E.md
-          - F: cp-training/codeforces/Edu_DIV2/1/F.md
-        - 2:
-          - A: cp-training/codeforces/Edu_DIV2/2/A.md
-          - B: cp-training/codeforces/Edu_DIV2/2/B.md
-          - C: cp-training/codeforces/Edu_DIV2/2/C.md
-          - D: cp-training/codeforces/Edu_DIV2/2/D.md
-          - E: cp-training/codeforces/Edu_DIV2/2/E.md
-          - F: cp-training/codeforces/Edu_DIV2/2/F.md
-    - Atcoder
-    - Nowcoder
-    - Other
-    - ICPC:
-      - 2023 澳门站:
-        - A: cp-training/icpc/2023_澳门/A.md
-        - D: cp-training/icpc/2023_澳门/D.md
-        - I: cp-training/icpc/2023_澳门/I.md
-        - J: cp-training/icpc/2023_澳门/J.md
-    - CCPC
-
-  - 算竞教程:
-    - 简介: tutorials/index.md
-  
-  - 知识详解:
-    - 简介: cp-algorithm/index.md
+      - DIV2:
+        - 977:
+          - A: cp-training/codeforces/div2/977/A.md
+          - B: cp-training/codeforces/div2/977/B.md
+          - C1: cp-training/codeforces/div2/977/C1.md
+          - C2: cp-training/codeforces/div2/977/C2.md
+          - D: cp-training/codeforces/div2/977/D.md
+          - E1: cp-training/codeforces/div2/977/E1.md
+          - E2: cp-training/codeforces/div2/977/E2.md
+          - E3: cp-training/codeforces/div2/977/E3.md
 
 theme:
   # 主题名字
