@@ -2,190 +2,182 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://urtusea.github.io/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
          <loc>https://urtusea.github.io/blogs/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
          <loc>https://urtusea.github.io/cp-algorithm/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
          <loc>https://urtusea.github.io/cp-templates/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
          <loc>https://urtusea.github.io/cp-templates/data_structure/disjoint_set_union/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
          <loc>https://urtusea.github.io/cp-templates/data_structure/fenwick_tree/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
          <loc>https://urtusea.github.io/cp-templates/data_structure/segment_tree/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
          <loc>https://urtusea.github.io/cp-templates/data_structure/sparse_table/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
-         <loc>https://urtusea.github.io/cp-templates/geometry/point/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://urtusea.github.io/cp-templates/graph/lowest_common_ancestor/</loc>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
          <loc>https://urtusea.github.io/cp-templates/graph/tarjan_cut_edge/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
          <loc>https://urtusea.github.io/cp-templates/graph/tarjan_cut_node/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
          <loc>https://urtusea.github.io/cp-templates/graph/tarjan_ebcc/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
          <loc>https://urtusea.github.io/cp-templates/graph/tarjan_scc/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
          <loc>https://urtusea.github.io/cp-templates/graph/tarjan_vbcc/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
          <loc>https://urtusea.github.io/cp-templates/math/mod_int/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
          <loc>https://urtusea.github.io/cp-templates/math/quick_power/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
          <loc>https://urtusea.github.io/cp-templates/string/string_hash/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
          <loc>https://urtusea.github.io/cp-training/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
-         <loc>https://urtusea.github.io/cp-training/codeforces/DIV1/969/A/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://urtusea.github.io/cp-training/atcoder/abc/377/A/</loc>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
-         <loc>https://urtusea.github.io/cp-training/codeforces/DIV1/969/B/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://urtusea.github.io/cp-training/atcoder/abc/377/B/</loc>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
-         <loc>https://urtusea.github.io/cp-training/codeforces/DIV1/969/C/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://urtusea.github.io/cp-training/atcoder/abc/377/C/</loc>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
-         <loc>https://urtusea.github.io/cp-training/codeforces/DIV1/969/D/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://urtusea.github.io/cp-training/atcoder/abc/377/D/</loc>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
-         <loc>https://urtusea.github.io/cp-training/codeforces/DIV1/975/A/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://urtusea.github.io/cp-training/atcoder/abc/377/E/</loc>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
-         <loc>https://urtusea.github.io/cp-training/codeforces/DIV1/975/B/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://urtusea.github.io/cp-training/atcoder/abc/377/F/</loc>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
-         <loc>https://urtusea.github.io/cp-training/codeforces/DIV1/975/C/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://urtusea.github.io/cp-training/atcoder/abc/377/G/</loc>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
-         <loc>https://urtusea.github.io/cp-training/codeforces/DIV1/975/D/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://urtusea.github.io/cp-training/ccpc/2022_mianyang/A/</loc>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
-         <loc>https://urtusea.github.io/cp-training/codeforces/DIV2/977/A/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://urtusea.github.io/cp-training/ccpc/2022_mianyang/C/</loc>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
-         <loc>https://urtusea.github.io/cp-training/codeforces/DIV2/977/B/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://urtusea.github.io/cp-training/ccpc/2022_mianyang/D/</loc>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
-         <loc>https://urtusea.github.io/cp-training/codeforces/DIV2/977/C1/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://urtusea.github.io/cp-training/ccpc/2022_mianyang/E/</loc>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
-         <loc>https://urtusea.github.io/cp-training/codeforces/DIV2/977/C2/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://urtusea.github.io/cp-training/ccpc/2022_mianyang/G/</loc>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
-         <loc>https://urtusea.github.io/cp-training/codeforces/DIV2/977/E1/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://urtusea.github.io/cp-training/ccpc/2022_mianyang/H/</loc>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
-         <loc>https://urtusea.github.io/cp-training/codeforces/Edu_DIV2/1/A/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://urtusea.github.io/cp-training/ccpc/2022_mianyang/J/</loc>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
-         <loc>https://urtusea.github.io/cp-training/codeforces/Edu_DIV2/1/B/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://urtusea.github.io/cp-training/ccpc/2022_mianyang/L/</loc>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
-         <loc>https://urtusea.github.io/cp-training/codeforces/Edu_DIV2/1/C/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://urtusea.github.io/cp-training/ccpc/2022_mianyang/M/</loc>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
-         <loc>https://urtusea.github.io/cp-training/codeforces/Edu_DIV2/1/D/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://urtusea.github.io/cp-training/codeforces/div2/977/A/</loc>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
-         <loc>https://urtusea.github.io/cp-training/codeforces/Edu_DIV2/1/E/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://urtusea.github.io/cp-training/codeforces/div2/977/B/</loc>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
-         <loc>https://urtusea.github.io/cp-training/codeforces/Edu_DIV2/1/F/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://urtusea.github.io/cp-training/codeforces/div2/977/C1/</loc>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
-         <loc>https://urtusea.github.io/cp-training/codeforces/Edu_DIV2/2/A/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://urtusea.github.io/cp-training/codeforces/div2/977/C2/</loc>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
-         <loc>https://urtusea.github.io/cp-training/codeforces/Edu_DIV2/2/B/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://urtusea.github.io/cp-training/codeforces/div2/977/D/</loc>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
-         <loc>https://urtusea.github.io/cp-training/codeforces/Edu_DIV2/2/C/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://urtusea.github.io/cp-training/codeforces/div2/977/E1/</loc>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
-         <loc>https://urtusea.github.io/cp-training/codeforces/Edu_DIV2/2/D/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://urtusea.github.io/cp-training/codeforces/div2/977/E2/</loc>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
-         <loc>https://urtusea.github.io/cp-training/codeforces/Edu_DIV2/2/E/</loc>
-         <lastmod>2024-10-06</lastmod>
-    </url>
-    <url>
-         <loc>https://urtusea.github.io/cp-training/codeforces/Edu_DIV2/2/F/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://urtusea.github.io/cp-training/codeforces/div2/977/E3/</loc>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
          <loc>https://urtusea.github.io/links/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
          <loc>https://urtusea.github.io/links/fanhuaxingyu/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <lastmod>2024-10-08</lastmod>
     </url>
     <url>
          <loc>https://urtusea.github.io/links/welcome24ever/</loc>
-         <lastmod>2024-10-06</lastmod>
-    </url>
-    <url>
-         <loc>https://urtusea.github.io/tutorials/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <lastmod>2024-10-08</lastmod>
     </url>
 </urlset>
