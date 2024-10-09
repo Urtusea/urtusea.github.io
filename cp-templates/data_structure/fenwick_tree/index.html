@@ -743,6 +743,69 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/binary_sqrt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Binary Sqrt - 二分开根
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/prime_sieve/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prime Sieve - 素数筛
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/prime/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prime - 大质数素性测试&分解
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1154,6 +1217,27 @@
   
   <span class="md-ellipsis">
     String Hash - 字符串哈希
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../string/kmp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KMP - 字符串匹配
   </span>
   
 
@@ -2204,6 +2288,9 @@
 <span class="normal">31</span>
 <span class="normal">32</span>
 <span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">fenwick_tree</span><span class="w"> </span><span class="p">{</span>
+<span class="k">private</span><span class="o">:</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">f</span><span class="p">;</span>
 <span class="k">public</span><span class="o">:</span>
 <span class="w">    </span><span class="cp">#define lowbit(x) (x &amp; -x)</span>
 <span class="w">    </span><span class="n">fenwick_tree</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">_n</span><span class="p">)</span>
@@ -2232,9 +2319,6 @@
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="cp">#undef lowbit</span>
-<span class="k">private</span><span class="o">:</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">f</span><span class="p">;</span>
 <span class="p">};</span>
 </code></pre></div></td></tr></table></div>
 
