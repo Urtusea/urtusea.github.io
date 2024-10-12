@@ -13,10 +13,10 @@
         <link rel="canonical" href="https://urtusea.github.io/cp-templates/math/mod_int/">
       
       
-        <link rel="prev" href="../../">
+        <link rel="prev" href="../binary_sqrt/">
       
       
-        <link rel="next" href="../quick_power/">
+        <link rel="next" href="../prime_sieve/">
       
       
       <link rel="icon" href="../../../images/Kizuna_Ai.svg">
@@ -707,6 +707,69 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../fast_power/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fast Power - 快速幂
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slow_timer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slow Timer - 龟速乘
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../binary_sqrt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Binary Sqrt - 二分开根
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -768,48 +831,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../quick_power/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Quick Power - 快速幂
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../binary_sqrt/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Binary Sqrt - 二分开根
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1150,6 +1171,48 @@
   
   <span class="md-ellipsis">
     Tarjan VBCC - 点双连通分量
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graph/heavy_path_decomposition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heavy Path Decomposition - 重链剖分
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graph/length_path_decomposition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Length Path Decomposition - 长链剖分
   </span>
   
 
@@ -2299,51 +2362,55 @@
 <span class="normal">42</span>
 <span class="normal">43</span>
 <span class="normal">44</span>
-<span class="normal">45</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
-<span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">quick_power</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">uInt</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&gt;&gt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">integral</span><span class="w"> </span><span class="n">U</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">fast_power</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">U</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&gt;&gt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Int</span><span class="w"> </span><span class="n">P</span><span class="o">&gt;</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">mod_int</span><span class="w"> </span><span class="p">{</span>
-<span class="k">private</span><span class="o">:</span>
-<span class="w">    </span><span class="n">Int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">Int</span><span class="w"> </span><span class="n">M</span><span class="p">;</span>
-<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Int</span><span class="w"> </span><span class="nf">get_mod</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="kt">int64_t</span><span class="w"> </span><span class="n">P</span><span class="o">&gt;</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">mod_int</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int64_t</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">int64_t</span><span class="w"> </span><span class="n">M</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">integral</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="n">mod_int</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">_x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="p">())</span>
+<span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">check</span><span class="p">(</span><span class="n">_x</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">Mod</span><span class="p">()))</span><span class="w"> </span><span class="p">{}</span>
+
+<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">Mod</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">int64_t</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">M</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="n">mod_int</span><span class="p">(</span><span class="n">Int</span><span class="w"> </span><span class="n">_x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
-<span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">check</span><span class="p">(</span><span class="n">_x</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">get_mod</span><span class="p">()))</span><span class="w"> </span><span class="p">{}</span>
-<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="n">Int</span><span class="w"> </span><span class="n">check</span><span class="p">(</span><span class="n">Int</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">check</span><span class="p">(</span><span class="kt">int64_t</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">int64_t</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">val</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
-<span class="w">            </span><span class="n">val</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">get_mod</span><span class="p">();</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">val</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">get_mod</span><span class="p">())</span>
-<span class="w">            </span><span class="n">val</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">get_mod</span><span class="p">();</span>
+<span class="w">            </span><span class="n">val</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">Mod</span><span class="p">();</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">val</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">Mod</span><span class="p">())</span>
+<span class="w">            </span><span class="n">val</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">Mod</span><span class="p">();</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">val</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="n">inv</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">quick_power</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">get_mod</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">fast_power</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">Mod</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">mod_int</span><span class="p">(</span><span class="n">check</span><span class="p">(</span><span class="n">get_mod</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">));</span>
+<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">mod_int</span><span class="p">(</span><span class="n">check</span><span class="p">(</span><span class="n">Mod</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">));</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="o">&amp;</span><span class="k">operator</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="p">(</span><span class="n">mod_int</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">check</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="o">&amp;</span><span class="k">operator</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="p">(</span><span class="n">mod_int</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">check</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="o">&amp;</span><span class="k">operator</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="p">(</span><span class="n">mod_int</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">check</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">get_mod</span><span class="p">());</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="o">&amp;</span><span class="k">operator</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="p">(</span><span class="n">mod_int</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">check</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">inv</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">get_mod</span><span class="p">());</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">mod_int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">mod_int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">mod_int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">mod_int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="n">mod_int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="p">(</span><span class="n">mod_int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="w"> </span><span class="o">&amp;</span><span class="k">operator</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="w"> </span><span class="o">&amp;</span><span class="n">is</span><span class="p">,</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">val</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mod_int</span><span class="p">(</span><span class="n">val</span><span class="p">.</span><span class="n">x</span><span class="p">),</span><span class="w"> </span><span class="n">is</span><span class="p">;</span>
+<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">check</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">check</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">x</span><span class="w">    </span><span class="o">%</span><span class="w"> </span><span class="n">Mod</span><span class="p">();</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="o">~</span><span class="n">other</span><span class="p">).</span><span class="n">x</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">Mod</span><span class="p">();</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">mod_int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">mod_int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">mod_int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">mod_int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="n">mod_int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="p">(</span><span class="n">mod_int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="w"> </span><span class="o">&amp;</span><span class="n">is</span><span class="p">,</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">M</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">M</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mod_int</span><span class="p">(</span><span class="n">M</span><span class="p">),</span><span class="w"> </span><span class="n">is</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="w"> </span><span class="o">&amp;</span><span class="k">operator</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="w"> </span><span class="o">&amp;</span><span class="n">os</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">os</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">val</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
+<span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="w"> </span><span class="o">&amp;</span><span class="n">os</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">mod_int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">M</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">os</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">M</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="p">};</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 
 

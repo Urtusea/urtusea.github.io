@@ -16,7 +16,7 @@
         <link rel="prev" href="../blogs/">
       
       
-        <link rel="next" href="math/mod_int/">
+        <link rel="next" href="math/fast_power/">
       
       
       <link rel="icon" href="../images/Kizuna_Ai.svg">
@@ -697,7 +697,16 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      初始代码
+      编译选项
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      初始模板
     </span>
   </a>
   
@@ -757,11 +766,11 @@
   
   
     <li class="md-nav__item">
-      <a href="math/mod_int/" class="md-nav__link">
+      <a href="math/fast_power/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Mod Int - 模数类
+    Fast Power - 快速幂
   </span>
   
 
@@ -778,11 +787,11 @@
   
   
     <li class="md-nav__item">
-      <a href="math/quick_power/" class="md-nav__link">
+      <a href="math/slow_timer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Quick Power - 快速幂
+    Slow Timer - 龟速乘
   </span>
   
 
@@ -804,6 +813,27 @@
   
   <span class="md-ellipsis">
     Binary Sqrt - 二分开根
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="math/mod_int/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mod Int - 模数类
   </span>
   
 
@@ -1148,6 +1178,48 @@
   
   <span class="md-ellipsis">
     Tarjan VBCC - 点双连通分量
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="graph/heavy_path_decomposition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heavy Path Decomposition - 重链剖分
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="graph/length_path_decomposition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Length Path Decomposition - 长链剖分
   </span>
   
 
@@ -2227,7 +2299,16 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      初始代码
+      编译选项
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      初始模板
     </span>
   </a>
   
@@ -2252,8 +2333,14 @@
 
 
 <h1 id="_1">前言</h1>
-<p>个人代码，仅仅代表个人书写风格，不喜勿喷 QAQ</p>
-<h2 id="_2">初始代码</h2>
+<p>个人代码，不喜勿喷，谢谢喵~</p>
+<blockquote>
+<p>注: 由于经历了一次装系统，将数据盘数据清空，所以剩下的模板均是抢救的，只剩一点点了</p>
+</blockquote>
+<h2 id="_2">编译选项</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>g++ main.cpp -o main.exe -std=c++20 -O2 -g -Wall
+</code></pre></div></td></tr></table></div>
+<h2 id="_3">初始模板</h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2267,22 +2354,16 @@
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;bits/stdc++.h&gt;</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;bits/stdc++.h&gt;</span>
 
-<span class="k">using</span><span class="w"> </span><span class="n">Int</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="kt">int64_t</span><span class="p">;</span>
-<span class="k">using</span><span class="w"> </span><span class="n">uInt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">uint64_t</span><span class="p">;</span>
-
-<span class="k">auto</span><span class="w"> </span><span class="n">code</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">{</span>
-
-<span class="p">}</span>
-
-<span class="k">auto</span><span class="w"> </span><span class="n">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">argv</span><span class="p">[],</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">envp</span><span class="p">[])</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="k">nullptr</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
 
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 <span class="w">        </span><span class="n">code</span><span class="p">();</span>
 
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>

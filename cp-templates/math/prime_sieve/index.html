@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://urtusea.github.io/cp-templates/math/prime_sieve/">
       
       
-        <link rel="prev" href="../binary_sqrt/">
+        <link rel="prev" href="../mod_int/">
       
       
         <link rel="next" href="../prime/">
@@ -710,11 +710,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../mod_int/" class="md-nav__link">
+      <a href="../fast_power/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Mod Int - 模数类
+    Fast Power - 快速幂
   </span>
   
 
@@ -731,11 +731,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../quick_power/" class="md-nav__link">
+      <a href="../slow_timer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Quick Power - 快速幂
+    Slow Timer - 龟速乘
   </span>
   
 
@@ -757,6 +757,27 @@
   
   <span class="md-ellipsis">
     Binary Sqrt - 二分开根
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mod_int/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mod Int - 模数类
   </span>
   
 
@@ -1150,6 +1171,48 @@
   
   <span class="md-ellipsis">
     Tarjan VBCC - 点双连通分量
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graph/heavy_path_decomposition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heavy Path Decomposition - 重链剖分
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graph/length_path_decomposition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Length Path Decomposition - 长链剖分
   </span>
   
 
@@ -2269,19 +2332,23 @@
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="o">&gt;</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">prime_sieve</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">prime_sieve</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">prime</span><span class="p">;</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">bitset</span><span class="o">&lt;</span><span class="n">N</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="w"> </span><span class="n">is_prime</span><span class="p">;</span>
+
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">is_prime</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 <span class="w">            </span><span class="n">prime</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">p</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">prime</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="n">p</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">prime</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
 <span class="w">            </span><span class="n">is_prime</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
+
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">prime</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>

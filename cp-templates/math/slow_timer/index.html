@@ -10,10 +10,10 @@
         <meta name="author" content="Urtusea">
       
       
-        <link rel="canonical" href="https://urtusea.github.io/cp-templates/math/quick_power/">
+        <link rel="canonical" href="https://urtusea.github.io/cp-templates/math/slow_timer/">
       
       
-        <link rel="prev" href="../mod_int/">
+        <link rel="prev" href="../fast_power/">
       
       
         <link rel="next" href="../binary_sqrt/">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Quick Power - 快速幂 - Urtusea CP-Algorithm Blog & Wiki</title>
+        <title>Slow Timer - 龟速乘 - Urtusea CP-Algorithm Blog & Wiki</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mod-int" class="md-skip">
+        <a href="#slow-timer" class="md-skip">
           跳转至
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Quick Power - 快速幂
+              Slow Timer - 龟速乘
             
           </span>
         </div>
@@ -710,11 +710,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../mod_int/" class="md-nav__link">
+      <a href="../fast_power/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Mod Int - 模数类
+    Fast Power - 快速幂
   </span>
   
 
@@ -744,7 +744,7 @@
           
   
   <span class="md-ellipsis">
-    Quick Power - 快速幂
+    Slow Timer - 龟速乘
   </span>
   
 
@@ -755,7 +755,7 @@
         
   
   <span class="md-ellipsis">
-    Quick Power - 快速幂
+    Slow Timer - 龟速乘
   </span>
   
 
@@ -806,6 +806,27 @@
   
   <span class="md-ellipsis">
     Binary Sqrt - 二分开根
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mod_int/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mod Int - 模数类
   </span>
   
 
@@ -1150,6 +1171,48 @@
   
   <span class="md-ellipsis">
     Tarjan VBCC - 点双连通分量
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graph/heavy_path_decomposition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heavy Path Decomposition - 重链剖分
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graph/length_path_decomposition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Length Path Decomposition - 长链剖分
   </span>
   
 
@@ -2253,14 +2316,14 @@
   
 
 
-<h1 id="mod-int">Mod Int</h1>
+<h1 id="slow-timer">Slow Timer</h1>
 <h2 id="_1">代码</h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
-<span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">quick_power</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">uInt</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&gt;&gt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">integral</span><span class="w"> </span><span class="n">U</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">slow_timer</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">U</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&gt;&gt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 
