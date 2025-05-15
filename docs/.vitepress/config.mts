@@ -1,9 +1,4 @@
 import { defineConfig } from 'vitepress'
-import getArticles from './articles.mts';
-import getSidebar from './sidebar.mjs';
-
-let articles = getArticles('src');
-const sidebar = getSidebar(articles);
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -12,22 +7,29 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: '主页', link: '/index.md' },
-      { text: 'XCPC-Template', link: '/xcpc-template/index' },
-      { text: 'XCPC-Algorithm', link: '/xcpc-algorithm/index' }
+      { text: '主页', link: '/' },
+      { text: 'XCPC-Template', link: '/xcpc-template/' },
+      { text: 'XCPC-Algorithm', link: '/xcpc-algorithm/' }
     ],
 
-    sidebar,
+    sidebar: {
+      '/xcpc-template/': [
+        {
+          text: 'XCPC-Template',
+          items: [
+          ]
+        }
+      ],
 
-    // sidebar: [
-    //   {
-    //     text: 'Examples',
-    //     items: [
-    //       { text: 'Markdown Examples', link: '/markdown-examples' },
-    //       { text: 'Runtime API Examples', link: '/api-examples' }
-    //     ]
-    //   }
-    // ],
+      '/xcpc-algorithm/': [
+        {
+          text: 'XCPC-Algorithm',
+          items: [
+
+          ]
+        }
+      ]
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Urtusea/urtusea.github.io/' }
