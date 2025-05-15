@@ -4,6 +4,8 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "urtusea.github.io",
   description: "my document",
+  head : [ ['link', { rel : 'icon', href : '/icon.png' }] ],
+  
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
