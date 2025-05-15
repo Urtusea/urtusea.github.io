@@ -22,7 +22,7 @@ export default defineConfig({
       { href: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap', rel: 'stylesheet' }
     ]
   ],
-  cleanUrls: true,
+  // cleanUrls: true,
   
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -45,7 +45,7 @@ export default defineConfig({
               text : '基本模板',
               collapsed : true,
               items : [
-                { text : 'ModInt - 模数类', link : '/xcpc-template/base/modint.md' }
+                { text : 'ModInt - 模数类', link : '/xcpc-template/base/modint' }
               ]
             }
           ]
