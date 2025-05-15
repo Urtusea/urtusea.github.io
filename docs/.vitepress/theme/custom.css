@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'MapleMono';
+  src: url('/MapleMono-NF-CN-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+:root {
+  --vp-font-family-base: 'Jetbrains Mono', 'MapleMono', sans-serif;
+  --vp-font-family-mono: 'Jetbrains Mono', 'MapleMono', monospace;
+  font-variant-ligatures: none;
+}
