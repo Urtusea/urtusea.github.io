@@ -45,7 +45,7 @@ export default defineConfig({
               text : '基本模板',
               collapsed : true,
               items : [
-                { text : 'ModInt - 模数类', link : '/xcpc-template/base/modint' }
+                { text : 'ModInt - 模数类', link : '/xcpc-template/base/modint.md' }
               ]
             }
           ]
