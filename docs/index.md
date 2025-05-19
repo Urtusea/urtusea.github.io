@@ -1,7 +1,7 @@
 ---
 hero:
   name: Urtusea's Blog
-  tagline: 记录一点自己的随笔
+  tagline: std::cout << "Hello World!\n";
 
 layout: home
 ---

@@ -29,12 +29,16 @@ export default defineConfig({
 
     nav: [
       { text: '主页', link: '/' },
-      { text: '随笔', link: '' },
+      { text: '随笔', link: '/note/' },
       { text: 'XCPC-Template', link: '/xcpc-template/' },
       { text: 'XCPC-Algorithm', link: '/xcpc-algorithm/' }
     ],
 
     sidebar: {
+      '/note/' : [
+        
+      ],
+
       '/xcpc-template/': [
         {
           text: 'XCPC-Template',
