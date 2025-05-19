@@ -36,7 +36,11 @@ export default defineConfig({
 
     sidebar: {
       '/note/' : [
-        
+        {
+          text: '随笔',
+          items: [
+          ]
+        }
       ],
 
       '/xcpc-template/': [
