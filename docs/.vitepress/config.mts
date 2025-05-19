@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "urtusea.github.io",
-  description: "",
+  description: "my blog",
   head: [
     [
       'link',
