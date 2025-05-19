@@ -1,22 +1,23 @@
 ---
 prev: false
 next: false
-aside: false
 ---
 
-# 注意事项
+# 前言
 
-本人的所有模板均在 `-std=c++20` 的编译环境下进行编写，如果出现因为编译环境问题导致的 `Compiler Error` 本人概不负责！
+## 注意事项
 
-# 编译选项
+本人的所有模板均在 `-std=c++20` 的编译环境下进行编写，如果出现 `Compiler Error` 请检查编译环境
+
+## 编译选项
 
 ``` bash
 g++ -O0 -g0 main.out main.cpp -std=c++20
 ```
 
-# 初始代码
+## 初始代码
 
-## 单测
+### 单测
 
 ``` cpp
 #include <bits/stdc++.h>
@@ -35,7 +36,7 @@ int main() {
 }
 ```
 
-## 多测
+### 多测
 
 ``` cpp
 #include <bits/stdc++.h>

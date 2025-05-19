@@ -3,11 +3,11 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "urtusea.github.io",
-  description: "my document",
-  head : [
+  description: "",
+  head: [
     [
       'link',
-      { rel : 'icon', href : '/icon.png' }
+      { rel: 'icon', href: '/icon.png' }
     ],
     [
       'link',
@@ -23,11 +23,13 @@ export default defineConfig({
     ]
   ],
   // cleanUrls: true,
-  
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+
     nav: [
-      { text: '主页', link: '/index.md' },
+      { text: '主页', link: '/' },
+      { text: '随笔', link: '' },
       { text: 'XCPC-Template', link: '/xcpc-template/' },
       { text: 'XCPC-Algorithm', link: '/xcpc-algorithm/' }
     ],
@@ -38,14 +40,21 @@ export default defineConfig({
           text: 'XCPC-Template',
           items: [
             {
-              text : '注意事项',
-              link : '/xcpc-template/'
+              text: '前言',
+              link: '/xcpc-template/'
             },
             {
-              text : '基本模板',
-              collapsed : true,
-              items : [
-                { text : 'ModInt - 模数类', link : '/xcpc-template/base/modint' }
+              text: '数据结构',
+              collapsed: true,
+              items: [
+                {
+                  text: '线段树',
+                  collapsed: true,
+                  items: [
+                    { text: 'Segment Tree - 单点修改线段树', link: '/xcpc-template/data_structure/segment_tree' },
+                    { text: 'Segment Tree Lazy - 区间修改懒标记线段树', link: '/xcpc-template/data_structure/segment_tree_lazy' }
+                  ]
+                }
               ]
             }
           ]
@@ -63,6 +72,10 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Urtusea/urtusea.github.io/' }
-    ]
+    ],
+
+    outline: {
+      label: '页面导航'
+    },
   }
 })
