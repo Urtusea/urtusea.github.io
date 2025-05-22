@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "urtusea.github.io",
-  description: "my blog",
+  description: "urtusea.github.io",
   head: [
     [
       'link',
@@ -56,11 +56,26 @@ export default defineConfig({
               collapsed: true,
               items: [
                 {
+                  text: '并查集',
+                  collapsed: true,
+                  items: [
+                    { text: 'Disjoint Union Set - 路径压缩按秩合并并查集', link: '/xcpc-template/data_structure/disjoint_union_set/disjoint_union_set'},
+                    { text: 'Disjoint Union Set Range - 区间路径压缩按秩合并并查集', link: '/xcpc-template/data_structure/disjoint_union_set/disjoint_union_set_range'}
+                  ]
+                },
+                {
+                  text: '树状数组',
+                  collapsed: true,
+                  items: [
+
+                  ]
+                },
+                {
                   text: '线段树',
                   collapsed: true,
                   items: [
-                    { text: 'Segment Tree - 单点修改线段树', link: '/xcpc-template/data_structure/segment_tree' },
-                    { text: 'Segment Tree Lazy - 区间修改懒标记线段树', link: '/xcpc-template/data_structure/segment_tree_lazy' }
+                    { text: 'Segment Tree - 单点修改线段树', link: '/xcpc-template/data_structure/segment_tree/segment_tree' },
+                    { text: 'Segment Tree Lazy - 区间修改懒标记线段树', link: '/xcpc-template/data_structure/segment_tree/segment_tree_lazy' }
                   ]
                 }
               ]
