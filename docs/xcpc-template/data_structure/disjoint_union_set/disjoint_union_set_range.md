@@ -3,24 +3,7 @@ prev: false
 next: false
 ---
 
-# Disjoint Union Set Range - 区间路径压缩按秩合并并查集
-
-## 使用示例
-
-``` cpp
-/*
-  注：
-    区间合并合并是指
-    (u, u + 1, u + 2, u + 3, u + len - 1)
-    (v, v + 1, v + 2, v + 3, v + len - 1)
-    使得所有的 u + i 和 v + i 合并，i ∈ [0, len)
-*/
-disjoint_union_set dsu(N);
-// 查找从 u 开始，长度为 2^k 所在集合
-dsu.find(int k, int u);
-// 合并 [u, u + (1 << k)) 和 [v, v + (1 << k))，在合并 u + i 和 v + i 时调用 call(u + i, v + i);
-dsu.merge_range(int k, int u, int v, func call);
-```
+# Disjoint Union Set Range - 倍增并查集
 
 ## 代码模板
 
