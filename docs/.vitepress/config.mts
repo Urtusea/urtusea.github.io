@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "urtusea.github.io",
   description: "urtusea.github.io",
+  base: '/urtusea.github.io/',
   head: [
     [
       'link',
@@ -22,7 +23,6 @@ export default defineConfig({
       { href: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap', rel: 'stylesheet' }
     ]
   ],
-  // cleanUrls: true,
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
