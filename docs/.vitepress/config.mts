@@ -35,20 +35,20 @@ export default defineConfig({
     ],
 
     sidebar: {
-      '/note/' : [
-        {
-          text: '随笔',
-          items: [
-            {
-              text: 'XCPC-游记',
-              collapsed: true,
-              items: [
-                { text: '2025 CCPC 山东省赛', link: 'note/XCPC/2025-CCPC-shandong' }
-              ]
-            }
-          ]
-        }
-      ],
+      // '/note/' : [
+      //   {
+      //     text: '随笔',
+      //     items: [
+      //       {
+      //         text: 'XCPC-游记',
+      //         collapsed: true,
+      //         items: [
+      //           { text: '2025 CCPC 山东省赛', link: 'note/XCPC/2025-CCPC-shandong' }
+      //         ]
+      //       }
+      //     ]
+      //   }
+      // ],
 
       // '/xcpc-template/': [
       //   {
@@ -149,13 +149,13 @@ export default defineConfig({
       //   }
       // ],
 
-      '/xcpc-algorithm/': [
-        {
-          text: 'XCPC-Algorithm',
-          items: [
-          ]
-        }
-      ]
+      // '/xcpc-algorithm/': [
+      //   {
+      //     text: 'XCPC-Algorithm',
+      //     items: [
+      //     ]
+      //   }
+      // ]
     },
 
     socialLinks: [
