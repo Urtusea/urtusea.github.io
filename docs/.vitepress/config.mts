@@ -4,7 +4,6 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "urtusea.github.io",
   description: "urtusea.github.io",
-  base: '/urtusea.github.io/',
   head: [
     [
       'link',
