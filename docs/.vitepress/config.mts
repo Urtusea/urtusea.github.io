@@ -108,6 +108,14 @@ export default defineConfig({
               items: [
                 {
                   text: '连通分量',
+                  collapsed: true,
+                  items: [
+                    { text: 'Tarjan Cut Edge - 割边', link: '/xcpc-template/graph/tarjan/tarjan_cut_edge' },
+                    { text: 'Tarjan Cut Node - 割边', link: '/xcpc-template/graph/tarjan/tarjan_cut_node' },
+                    { text: 'Tarjan SCC - 强连通分量', link: '/xcpc-template/graph/tarjan/tarjan_scc' },
+                    { text: 'Tarjan EBCC - 边双连通分量', link: '/xcpc-template/graph/tarjan/tarjan_ebcc' },
+                    { text: 'Tarjan VBCC - 点双连通分量', link: '/xcpc-template/graph/tarjan/tarjan_vbcc' },
+                  ]
                 },
                 {
                   text: '树论',
