@@ -43,7 +43,7 @@ export default defineConfig({
               text: 'XCPC-游记',
               collapsed: true,
               items: [
-                { text: '2025 CCPC 山东省赛', link: 'note/XCPC-游记/2025-CCPC-山东省赛' }
+                // { text: '2025 CCPC 山东省赛', link: 'note/XCPC-游记/2025-CCPC-山东省赛' }
               ]
             }
           ]
