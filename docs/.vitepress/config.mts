@@ -83,7 +83,8 @@ export default defineConfig({
                   collapsed: true,
                   items: [
                     { text: 'Segment Tree - 单点修改线段树', link: '/xcpc-template/data_structure/segment_tree/segment_tree' },
-                    { text: 'Segment Tree Lazy - 懒标记线段树', link: '/xcpc-template/data_structure/segment_tree/segment_tree_lazy' }
+                    { text: 'Segment Tree Lazy - 懒标记线段树', link: '/xcpc-template/data_structure/segment_tree/segment_tree_lazy' },
+                    { text: 'Range Graph - 线段树优化建图', link: '/xcpc-template/data_structure/segment_tree/range_graph'}
                   ]
                 },
                 {

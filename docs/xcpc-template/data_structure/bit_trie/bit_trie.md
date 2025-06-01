@@ -10,7 +10,6 @@ next: false
 ``` cpp
 template <int N, int B> struct bit_trie {
   using T = std::conditional_t<(B < 32), uint, uInt>;
-  
   static constexpr int M = []() {
     int res = 0;
     for (int i = 0; i <= B; i++) {
@@ -18,7 +17,6 @@ template <int N, int B> struct bit_trie {
     }
     return res;
   }();
-
   int lst;
   int cnt[M + 1];
   int son[M + 1][2];
@@ -39,15 +37,15 @@ template <int N, int B> struct bit_trie {
 
   void split(T x, int& u, int& v, int p, int d = B - 1) {
     if (!p) return void(u = v = 0);
-    if (d--) {
+    if (d) {
       if (x >> d & 1) {
         u = p;
         v = ++lst;
-        split(x, son[u][1], son[v][1], son[u][1], d);
+        split(x, son[u][1], son[v][1], son[u][1], d - 1);
       } else {
         v = p;
         u = ++lst;
-        split(x, son[u][0], son[v][0], son[v][0], d);
+        split(x, son[u][0], son[v][0], son[v][0], d - 1);
       }
       cnt[u] = cnt[son[u][0]] + cnt[son[u][1]];
       cnt[v] = cnt[son[v][0]] + cnt[son[v][1]];

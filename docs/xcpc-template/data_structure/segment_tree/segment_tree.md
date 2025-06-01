@@ -48,7 +48,7 @@ template <typename T> struct segment_tree {
     int m = (l + r) >> 1;
     int res = find_pref(lson(p), l, m, L, R, pref, check);
     if (res == -1)
-      return find_pref(rson(p), m, r, L, R, pref + info[lson(p)], check);
+      return find_pref(rson(p), m, r, L, R, pref + (L <= l && r <= m ? info[lson(p)] : T()), check);
     else
       return res;
   }
@@ -59,7 +59,7 @@ template <typename T> struct segment_tree {
     int m = (l + r) >> 1;
     int res = find_suff(rson(p), m, r, L, R, suff, check);
     if (res == -1)
-      return find_suff(lson(p), l, m, L, R, info[rson(p)] + suff, check);
+      return find_suff(lson(p), l, m, L, R, (L <= m && r <= R ? info[rson(p)] : T()) + suff, check);
     else
       return res;
   }

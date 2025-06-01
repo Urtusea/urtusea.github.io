@@ -37,9 +37,8 @@ template <typename T> struct chtholly_tree {
     auto L = split(l);
     auto R = split(r + 1);
     while (L != R) {
-      auto M = std::next(L);
-      call(L, M);
-      L = M;
+      auto M = L++;
+      call(M, L);
     }
   }
 };
