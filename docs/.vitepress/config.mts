@@ -65,8 +65,8 @@ export default defineConfig({
                   text: '并查集',
                   collapsed: true,
                   items: [
-                    { text: 'Disjoint Union Set - 并查集', link: '/xcpc-template/data_structure/disjoint_union_set/disjoint_union_set'},
-                    { text: 'Disjoint Union Set Range - 倍增并查集', link: '/xcpc-template/data_structure/disjoint_union_set/disjoint_union_set_range'}
+                    { text: 'Disjoint Union Set - 并查集', link: '/xcpc-template/data_structure/disjoint_union_set/disjoint_union_set' },
+                    { text: 'Disjoint Union Set Range - 倍增并查集', link: '/xcpc-template/data_structure/disjoint_union_set/disjoint_union_set_range' }
                   ]
                 },
                 {
@@ -90,14 +90,14 @@ export default defineConfig({
                   text: 'Bit字典树',
                   collapsed: true,
                   items: [
-                    { text: 'Bit Trie - Bit字典树', link: '/xcpc-template/data_structure/bit_trie/bit_trie'}
+                    { text: 'Bit Trie - Bit字典树', link: '/xcpc-template/data_structure/bit_trie/bit_trie' }
                   ]
                 },
                 {
                   text: '珂朵莉树',
                   collapsed: true,
                   items: [
-                    { text: 'Chtholly Tree - 珂朵莉树', link: '/xcpc-template/data_structure/chtholly_tree/chtholly_tree'}
+                    { text: 'Chtholly Tree - 珂朵莉树', link: '/xcpc-template/data_structure/chtholly_tree/chtholly_tree' }
                   ]
                 }
               ]
