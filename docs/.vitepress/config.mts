@@ -165,7 +165,7 @@ export default defineConfig({
                   text: '素数筛',
                   collapsed: true,
                   items: [
-                    { text: 'Prime Sieve - 素数筛', link: '/xcpc-template/number-theory/prime_sieve/prime_sieve' },
+                    { text: 'Prime Sieve - 素数筛', link: '/xcpc-template/number_theory/prime_sieve/prime_sieve' },
                   ]
                 }
               ]
