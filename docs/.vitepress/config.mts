@@ -151,19 +151,6 @@ export default defineConfig({
               ]
             },
             {
-              text: '线性代数',
-              collapsed: true,
-              items: [
-                {
-                  text: '矩阵类',
-                  collapsed: true,
-                  items: [
-                    { text: 'Matrix 2x2 - 2x2矩阵类', link: '/xcpc-template/linear_algebra/matrix/matrix_2x2' }
-                  ]
-                },
-              ]
-            },
-            {
               text: '数论',
               collapsed: true,
               items: [
@@ -181,6 +168,19 @@ export default defineConfig({
                     { text: 'Prime Sieve - 素数筛', link: '/xcpc-template/number-theory/prime_sieve/prime_sieve' },
                   ]
                 }
+              ]
+            },
+            {
+              text: '线性代数',
+              collapsed: true,
+              items: [
+                {
+                  text: '矩阵类',
+                  collapsed: true,
+                  items: [
+                    { text: 'Matrix 2x2 - 2x2矩阵类', link: '/xcpc-template/linear_algebra/matrix/matrix_2x2' }
+                  ]
+                },
               ]
             },
           ]
