@@ -174,6 +174,13 @@ export default defineConfig({
                     { text: 'Mod Int - 模数类', link: '/xcpc-template/number_theory/mod_int/mod_int' }
                   ]
                 },
+                {
+                  text: '素数筛',
+                  collapsed: true,
+                  items: [
+                    { text: 'Prime Sieve - 素数筛', link: '/xcpc-template/number-theory/prime_sieve/prime_sieve' },
+                  ]
+                }
               ]
             },
           ]
