@@ -78,6 +78,14 @@ export default defineConfig({
                   ]
                 },
                 {
+                  text: 'ST表',
+                  collapsed: true,
+                  items: [
+                    { text: 'Sparse Table - ST表', link: '/xcpc-template/data_structure/sparse_table/sparse_table' },
+                    { text: 'Sparse Table 2D - 二维ST表', link: '/xcpc-template/data_structure/sparse_table/sparse_table_2D' },
+                  ]
+                },
+                {
                   text: '线段树',
                   collapsed: true,
                   items: [
@@ -99,7 +107,21 @@ export default defineConfig({
                   items: [
                     { text: 'Chtholly Tree - 珂朵莉树', link: '/xcpc-template/data_structure/chtholly_tree/chtholly_tree' }
                   ]
-                }
+                },
+                {
+                  text: '笛卡尔树',
+                  collapsed: true,
+                  items: [
+                    { text: 'Cartesian Tree - 笛卡尔树', link: '/xcpc-template/data_structure/cartesian_tree/cartesian_tree' }
+                  ]
+                },
+                {
+                  text: '平衡树',
+                  collapsed: true,
+                  items: [
+                    { text: 'pbds Tree - pbds库平衡树', link: '/xcpc-template/data_structure/balanced_tree/pbds_tree' },
+                  ]
+                },
               ]
             },
             {
