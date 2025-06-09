@@ -30,7 +30,7 @@ export default defineConfig({
       { text: '主页', link: '/' },
       { text: '随笔', link: '/note/' },
       { text: 'XCPC-Template', link: '/xcpc-template/' },
-      { text: 'XCPC-Algorithm', link: '/xcpc-algorithm/' }
+      // { text: 'XCPC-Algorithm', link: '/xcpc-algorithm/' }
     ],
 
     sidebar: {
@@ -56,6 +56,10 @@ export default defineConfig({
             {
               text: '前言',
               link: '/xcpc-template/'
+            },
+            {
+              text: '列表清单',
+              link: '/xcpc-template/todolist'
             },
             {
               text: '数据结构',
@@ -187,13 +191,13 @@ export default defineConfig({
         }
       ],
 
-      '/xcpc-algorithm/': [
-        {
-          text: 'XCPC-Algorithm',
-          items: [
-          ]
-        }
-      ]
+      // '/xcpc-algorithm/': [
+      //   {
+      //     text: 'XCPC-Algorithm',
+      //     items: [
+      //     ]
+      //   }
+      // ]
     },
 
     socialLinks: [
