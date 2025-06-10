@@ -155,6 +155,19 @@ export default defineConfig({
               ]
             },
             {
+              text: '字符串',
+              collapsed: true,
+              items: [
+                {
+                  text: '字典树',
+                  collapsed: true,
+                  items: [
+                    { text: 'Trie - 字典树', link: '/xcpc-template/string/trie/trie' }
+                  ]
+                }
+              ]
+            },
+            {
               text: '数论',
               collapsed: true,
               items: [
