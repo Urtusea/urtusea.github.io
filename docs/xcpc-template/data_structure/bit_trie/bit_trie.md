@@ -17,12 +17,12 @@ template <int N, int B> struct bit_trie {
     }
     return res;
   }();
-  int lst;
+  int idx;
   int cnt[M + 1];
   int son[M + 1][2];
 
   inline int nxt(int& p) {
-    return p ? p : p = ++lst;
+    return p ? p : p = ++idx;
   }
 
   void insert(T x, int u = 0) {
@@ -40,11 +40,11 @@ template <int N, int B> struct bit_trie {
     if (d) {
       if (x >> d & 1) {
         u = p;
-        v = ++lst;
+        v = ++idx;
         split(x, son[u][1], son[v][1], son[u][1], d - 1);
       } else {
         v = p;
-        u = ++lst;
+        u = ++idx;
         split(x, son[u][0], son[v][0], son[v][0], d - 1);
       }
       cnt[u] = cnt[son[u][0]] + cnt[son[u][1]];

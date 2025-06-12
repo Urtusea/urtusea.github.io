@@ -164,6 +164,14 @@ export default defineConfig({
                   items: [
                     { text: 'Trie - 字典树', link: '/xcpc-template/string/trie/trie' }
                   ]
+                },
+                {
+                  text: 'KMP',
+                  collapsed: true,
+                  items: [
+                    { text: 'KMP', link: '/xcpc-template/string/kmp/kmp' },
+                    { text: 'ExKMP', link: '/xcpc-template/string/kmp/exkmp' }
+                  ]
                 }
               ]
             },
