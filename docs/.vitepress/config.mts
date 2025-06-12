@@ -159,6 +159,13 @@ export default defineConfig({
               collapsed: true,
               items: [
                 {
+                  text: '哈希',
+                  collapsed: true,
+                  items: [
+                    { text: 'String Hash - 字符串哈希', link: '/xcpc-template/string/hash/string_hash' }
+                  ]
+                },
+                {
                   text: '字典树',
                   collapsed: true,
                   items: [
