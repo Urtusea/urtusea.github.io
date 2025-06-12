@@ -37,6 +37,6 @@ std::vector<int> tarjan_cut_node(int n, const auto& G) {
   for (int u = 1; u <= n; u++)
     if (!dfn[u]) tarjan(tarjan, root = u);
   
-  return cut;
+  return std::move(cut);
 }
 ```

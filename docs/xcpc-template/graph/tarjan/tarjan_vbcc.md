@@ -46,6 +46,6 @@ std::vector<std::vector<int>> tarjan_vbcc(int n, const auto& G) {
   for (int u = 1; u <= n; u++)
     if (!dfn[u]) tarjan(tarjan, u);
   
-  return vbcc;
+  return std::move(vbcc);
 }
 ```

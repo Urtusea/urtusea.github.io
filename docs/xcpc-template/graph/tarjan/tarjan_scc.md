@@ -41,6 +41,6 @@ std::vector<int> tarjan_scc(int n, const auto& G) {
   for (int u = 1; u <= n; u++)
     if (!dfn[u]) tarjan(tarjan, u);
   
-  return scc;
+  return std::move(scc);
 }
 ```

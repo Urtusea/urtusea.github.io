@@ -20,6 +20,6 @@ const auto prime = []() -> std::vector<int> {
   }
   for (int i = 3; i <= N; i += 2)
     if (!is_prime[i]) res.push_back(i);
-  return res;
+  return std::move(res);
 }();
 ```

@@ -43,6 +43,6 @@ std::vector<int> tarjan_ebcc(int n, const auto& G) {
   for (int u = 1; u <= n; u++)
     if (!dfn[u]) tarjan(tarjan, u, 0);
   
-  return ebcc;
+  return std::move(ebcc);
 }
 ```

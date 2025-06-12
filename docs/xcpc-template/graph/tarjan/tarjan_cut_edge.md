@@ -34,6 +34,6 @@ std::vector<int> tarjan_cut_edge(int n, int m, const auto& G) {
   for (int u = 1; u <= n; u++)
     if (!dfn[u]) tarjan(tarjan, u, 0);
     
-  return cut;
+  return std::move(cut);
 }
 ```

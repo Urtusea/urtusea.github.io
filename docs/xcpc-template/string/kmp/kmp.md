@@ -17,6 +17,6 @@ std::vector<int> kmp(const std::string& a, const std::string& b) {
       j = p[j - 1];
     p[i] = j + (s[i] == s[j]);
   }
-  return p;
+  return std::move(p);
 }
 ```
