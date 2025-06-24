@@ -16,10 +16,10 @@ template <typename T> struct fenwick_tree {
 
   inline int pos(int i, int j) { return (i - 1) * size_m + j; }
 
-  void build(int n, int m) {
+  void build(int n, int m, const T& init = T()) {
     size_n = n;
     size_m = m;
-    std::fill(info.begin(), info.begin() + n * m + 1, T());
+    std::fill(info.begin(), info.begin() + n * m + 1, init);
   }
 
   void update(int x, int y, const T& t) {

@@ -14,9 +14,9 @@ template <typename T> struct fenwick_tree {
 
   fenwick_tree(int n) : size(n), info(n + 1) {}
 
-  void build(int n) {
+  void build(int n, const T& init = T()) {
     size = n;
-    std::fill(info.begin(), info.begin() + n + 1, T());
+    std::fill(info.begin(), info.begin() + n + 1, init);
   }
 
   void update(int u, const T& x) {
