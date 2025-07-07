@@ -61,13 +61,13 @@ export default defineConfig({
         }
       ],
 
-      // '/xcpc-algorithm/': [
-      //   {
-      //     text: 'XCPC-Algorithm',
-      //     items: [
-      //     ]
-      //   }
-      // ]
+      '/xcpc-algorithm/': [
+        {
+          text: 'XCPC-Algorithm',
+          items: [
+          ]
+        }
+      ]
     },
 
     socialLinks: [
